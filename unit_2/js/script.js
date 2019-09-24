@@ -68,3 +68,12 @@ button_t10.onclick = function () {
 }
 
 // Task 11
+let input_t11 = document.querySelector('.input_t11');
+let button_t11 = document.querySelector('.button_t11');
+let aut_t11 = document.querySelector('.aut_t11');
+
+button_t11.onclick = function () {
+    let vl_t11 = +input_t11.value;
+    aut_t11.innerHTML = vl_t11 + 10;
+    input_t11.value = '';
+}
