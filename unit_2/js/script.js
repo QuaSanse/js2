@@ -77,3 +77,16 @@ button_t11.onclick = function () {
     aut_t11.innerHTML = vl_t11 + 10;
     input_t11.value = '';
 }
+
+// Task 12
+let name_t12 = document.querySelector('.input_t12_1');
+let surname_t12 = document.querySelector('.input_t12_2');
+let button_t12 = document.querySelector('.button_t12');
+
+button_t12.onclick = function () {
+    let vl_name_12 = name_t12.value;
+    let vl_surname_t12 = surname_t12.value;
+    console.log('Hello ' + vl_name_12 + ' ' + vl_surname_t12);
+    name_t12.value = '';
+    surname_t12.value = '';
+}
