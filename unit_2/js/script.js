@@ -90,3 +90,17 @@ button_t12.onclick = function () {
     name_t12.value = '';
     surname_t12.value = '';
 }
+
+// Task 13
+let input_t13_1 = document.querySelector('.input_t13_1');
+let input_t13_2 = document.querySelector('.input_t13_2');
+let button_t13 = document.querySelector('.button_t13');
+let aut_t13 = document.querySelector('.aut_t13');
+
+button_t13.onclick = function () {
+    let vl_t13_1 = +input_t13_1.value;
+    let vl_t13_2 = +input_t13_2.value;
+    aut_t13.innerHTML = vl_t13_1 + vl_t13_2;
+    input_t13_1.value = '';
+    input_t13_2.value = '';
+}
