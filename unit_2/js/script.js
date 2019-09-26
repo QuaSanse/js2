@@ -104,3 +104,25 @@ button_t13.onclick = function () {
     input_t13_1.value = '';
     input_t13_2.value = '';
 }
+
+// Task 14
+let input_t14 = document.querySelector('.input_t14');
+input_t14.value = 'Hello';
+
+// Task 15
+let y = document.querySelector('.input_t15');
+y.style.border = '2px solid red';
+
+// Task 16
+let input_t16_1 = document.querySelector('.input_t16_1');
+let input_t16_2 = document.querySelector('.input_t16_2');
+let aut_t16 = document.querySelector('.aut_t16');
+
+
+
+input_t16_2.oninput = function () {
+    let vl_t16_1 = +input_t16_1.value;
+    let vl_t16_2 = +input_t16_2.value;
+
+    aut_t16.innerHTML = vl_t16_1 + vl_t16_2;
+}
