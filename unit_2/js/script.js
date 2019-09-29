@@ -118,11 +118,60 @@ let input_t16_1 = document.querySelector('.input_t16_1');
 let input_t16_2 = document.querySelector('.input_t16_2');
 let aut_t16 = document.querySelector('.aut_t16');
 
-
-
 input_t16_2.oninput = function () {
     let vl_t16_1 = +input_t16_1.value;
     let vl_t16_2 = +input_t16_2.value;
 
     aut_t16.innerHTML = vl_t16_1 + vl_t16_2;
+}
+
+// Task 17
+let input_t17 = document.querySelector('.input_t17');
+let button_t17 = document.querySelector('.button_t17');
+
+button_t17.onclick = function () {
+    let vl_t17 = input_t17.value;
+    console.log(vl_t17 = parseInt(vl_t17));
+}
+
+// Task 18
+let input_t18 = document.querySelector('.input_t18');
+let button_t18 = document.querySelector('.button_t18');
+
+button_t18.onclick = function () {
+    let vl_t18 = input_t18.value;
+    console.log(vl_t18 = parseFloat(vl_t18));
+}
+
+// Task 19
+let input_t19_1 = document.querySelector('.input_t19_1');
+let input_t19_2 = document.querySelector('.input_t19_2');
+let button_t19 = document.querySelector('.button_t19');
+let aut_t19 = document.querySelector('.aut_t19');
+
+button_t19.onclick = function () {
+    let vl_t19_1 = input_t19_1.value;
+    let vl_t19_2 = input_t19_2.value;
+
+    aut_t19.innerHTML = parseInt(vl_t19_1) + parseInt(vl_t19_2);
+    input_t19_1.value = '';
+    input_t19_2.value = '';
+}
+
+// Task 20
+let t20_name = document.querySelector('.t20_name');
+let t20_surname = document.querySelector('.t20_surname');
+let t20_age = document.querySelector('.t20_age');
+let t20_occupation = document.querySelector('.t20_occupation');
+let button_t20 = document.querySelector('.button_t20');
+let aut_t20 = document.querySelector('.aut_t20');
+
+button_t20.onclick = function () {
+    let vl_t20_name = t20_name.value;
+    let vl_t20_surname = t20_surname.value;
+    let vl_t20_age = t20_age.value;
+    let vl_t20_occupation = t20_occupation.value;
+
+    //let vl_t20_name = t20_name.value;
+    aut_t20.innerHTML = 'Уважаемый ' + vl_t20_name + ' ' + vl_t20_surname + ',  ваш возраст ' + vl_t20_age + ' года, по професси вы ' + vl_t20_occupation + '.';
 }
