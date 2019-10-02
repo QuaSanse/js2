@@ -60,3 +60,63 @@ button_t4.onclick = () => {
         aut_t4.innerHTML = vl_t4_2;
     }
 }
+
+// Task 5
+// Создайте на странице input,куда пользователь может вводить год рождения.
+// Добавьте кнопку.
+// При нажатии кнопки выполняйте функцию, которая
+// если год рождения меньше 2000 выводит на страницу возраст пользователя (2019 - введенный год рождения),
+// если год рождения больше или равен 2000 - выводит в консоль возраст пользователя
+
+let input_t5 = document.querySelector('.input_t5');
+let button_t5 = document.querySelector('.button_t5');
+let aut_t5 = document.querySelector('.aut_t5');
+
+
+button_t5.onclick = () => {
+    let vl_t5 = input_t5.value;
+
+    if (vl_t5 < 2000) {
+        aut_t5.innerHTML = vl_t5 + ' - введенный год рождения';
+    } else {
+        console.log(2019 - vl_t5);
+    }
+}
+
+// Task 6
+// Создайте input куда пользователь может ввести номер квартиры.
+// Если квартира от 1 до 32 - то выводите сообщение, о том, что такая квартира есть,
+// если другое число - сообщение о том, что квартира не существует.
+
+let input_t6 = document.querySelector('.input_t6');
+let aut_t6 = document.querySelector('.aut_t6');
+
+input_t6.oninput = () => {
+    let vl_t6 = input_t6.value;
+
+    if (vl_t6 >= 1 && vl_t6 <= 32) {
+        aut_t6.innerHTML = 'Такая квартира есть!';
+    } else if (vl_t6 == '') {
+        aut_t6.innerHTML = '';
+    } else {
+        aut_t6.innerHTML = 'Квартира не существует!';
+    }
+}
+
+// Task 7
+// Создайте input куда пользователь может ввести число.
+// После нажатия кнопки - на страницу должно выводиться сообщение - большие или меньше нуля это число.
+
+let input_t7 = document.querySelector('.input_t7');
+let button_t7 = document.querySelector('.button_t7');
+let aut_t7 = document.querySelector('.aut_t7');
+
+button_t7.onclick = () => {
+    let vl_t7 = input_t7.value;
+
+    if (vl_t7 < 0) {
+        aut_t7.innerHTML = 'Меньше нуля это число';
+    } else {
+        aut_t7.innerHTML = 'Больше нуля это число';
+    }
+}

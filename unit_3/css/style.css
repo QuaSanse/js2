@@ -4,3 +4,7 @@ html, body {
 body {
     margin: 20px;
 }
+
+article {
+    margin: 10px;
+}
