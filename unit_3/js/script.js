@@ -77,7 +77,7 @@ button_t5.onclick = () => {
     let vl_t5 = input_t5.value;
 
     if (vl_t5 < 2000) {
-        aut_t5.innerHTML = vl_t5 + ' - введенный год рождения';
+        aut_t5.innerHTML = 2019 - vl_t5;
     } else {
         console.log(2019 - vl_t5);
     }
@@ -118,5 +118,46 @@ button_t7.onclick = () => {
         aut_t7.innerHTML = 'Меньше нуля это число';
     } else {
         aut_t7.innerHTML = 'Больше нуля это число';
+    }
+}
+
+// Task 8.
+// Создайте input куда пользователь может ввести число.
+// После нажатия кнопки - на страницу должно выводиться сообщение - четное или нет это число.
+// Определить четное или нет число в JS очень просто.
+// Нужно получить целый остаток от деления (читать за оператор), для этого используется оператор % .
+// И проверить. Если остаток от деления 0 - то число четное, если нет - не четное.
+
+let input_t8 = document.querySelector('.input_t8');
+let button_t8 = document.querySelector('.button_t8');
+let aut_t8 = document.querySelector('.aut_t8');
+
+button_t8.onclick = () => {
+    let vl_t8 = input_t8.value;
+
+    if (vl_t8 % 2) {
+        aut_t8.innerHTML = 'Число не четное';
+    } else {
+        aut_t8.innerHTML = 'Число четное';
+    }
+}
+
+// Task 9.
+// Создайте 2 инпута.
+// Если оба инпута заполнены (не равны пустой строке),
+// то по нажатию кнопки число из первого инпута возведите в степень из второго input.
+// Результат выведите на страницу.
+
+let input_t9_1 = document.querySelector('.input_t9_1');
+let input_t9_2 = document.querySelector('.input_t9_2');
+let button_t9 = document.querySelector('.button_t9');
+let aut_t9 = document.querySelector('.aut_t9');
+
+button_t9.onclick = () => {
+    let vl_t9_1 = input_t9_1.value;
+    let vl_t9_2 = input_t9_2.value;
+
+    if (vl_t9_1 != '' && vl_t9_2 != '') {
+        aut_t9.innerHTML = vl_t9_1 ** vl_t9_2;
     }
 }
