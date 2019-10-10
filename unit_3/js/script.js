@@ -230,3 +230,112 @@ button_t12.onclick = () => {
             break;
     }
 }
+
+// Task 13.
+// Пользователь может ввести номер дома.
+// Если дом от 1 до 5 - то улица 1,
+// если от 6 до 11 - улица 2,
+// если от 11 до 20 - улица 3.
+// Используя if, elseif - реализуйте программу, которая будет указывать улицу в зависимости от введенного дома.
+
+let input_t13 = document.querySelector('.input_t13');
+let button_t13 = document.querySelector('.button_t13');
+let aut_t13 = document.querySelector('.aut_t13');
+
+button_t13.onclick = () => {
+    let vl_t13 = +input_t13.value;
+
+    if (vl_t13 >= 1 && vl_t13 <= 5) {
+        aut_t13.innerHTML = 'улица 1';
+    } else if (vl_t13 >= 6 && vl_t13 <= 11) {
+        aut_t13.innerHTML = 'улица 2';
+    } else if (vl_t13 >= 11 && vl_t13 <= 20) {
+        aut_t13.innerHTML = 'улица 3';
+    } else {
+        aut_t13.innerHTML = '';
+    }
+    input_t13.value = '';
+}
+
+// Task 14.
+// Создайте input куда пользователь может ввести количество рентген.
+// Это число от 0 и до 1000.
+// С помощью if, else if реализуйте вывод по таблице:
+// от 0 до 25 - не обнаруживается
+// до 50 - снижение числа лимфоцитов
+// до 100 - вялость, рвота, до 150 - смертность 5%,
+// до 350 - смертность 50% за 30 суток, до 600 - 90% смертность за 2 недели.
+// Больше 600 - смертность 100%. Вывод результатов сделайте на страницу.
+
+let input_t14 = document.querySelector('.input_t14');
+let button_t14 = document.querySelector('.button_t14');
+let aut_t14 = document.querySelector('.aut_t14');
+
+button_t14.onclick = () => {
+    let vl_t14 = input_t14.value;
+
+    if (vl_t14 >= 0 && vl_t14 <= 25) {
+        aut_t14.innerHTML = 'не обнаруживается';
+    } else if (vl_t14 > 25 && vl_t14 <= 50) {
+        aut_t14.innerHTML = 'снижение числа лимфоцитов';
+    } else if (vl_t14 > 50 && vl_t14 <= 100) {
+        aut_t14.innerHTML = 'вялость, рвота, до 150 - смертность 5%';
+    } else if (vl_t14 > 100 && vl_t14 <= 350) {
+        aut_t14.innerHTML = 'смертность 50% за 30 суток';
+    } else if (vl_t14 > 350 && vl_t14 <= 600) {
+        aut_t14.innerHTML = '90% смертность за 2 недели';
+    } else if (vl_t14 > 600) {
+        aut_t14.innerHTML = 'смертность 100%';
+    }
+    input_t14.value = '';
+}
+
+// Task 15.
+// Создайте переменные x = 1, y = 0.
+// Выведите в консоль результат операции x && y,
+// а затем x || y. Изучите результат.
+
+let x = 1;
+let y = 0;
+
+//console.log(x && y);
+console.log(x || y);
+
+// Task 16.
+// В Казахстане, налог на объем двигателя составляет:
+// от 0 до 499 кубов - 2525 тенге
+// от 500 до 1199 кубов - 5050 тенге
+// от 1200 до 1599 кубов - 8275 тенге
+// от 1600 до 1899 кубов - 9675 тенге
+// от 1900 до 1999 кубов - 11075тенге
+// от 2000 и выше кубов - 15000 тенге
+// Напишите программу, где пользователь может ввести в input объем двигателя и получить налог на данный двигатель.
+
+let input_t16 = document.querySelector('.input_t16');
+let button_t16 = document.querySelector('.button_t16');
+let aut_t16 = document.querySelector('.aut_t16');
+
+button_t16.onclick = () => {
+    let vl_t16 = input_t16.value;
+
+    switch (true) {
+        case vl_t16 >= 0 && vl_t16 <= 499:
+            aut_t16.innerHTML = '2525 тенге';
+            break;
+        case vl_t16 >= 500 && vl_t16 <= 1199:
+            aut_t16.innerHTML = '5050 тенге';
+            break;
+        case vl_t16 >= 1200 && vl_t16 <= 1599:
+            aut_t16.innerHTML = '8275 тенге';
+            break;
+        case vl_t16 >= 1600 && vl_t16 <= 1899:
+            aut_t16.innerHTML = '9675 тенге';
+            break;
+        case vl_t16 >= 1900 && vl_t16 <= 1999:
+            aut_t16.innerHTML = '11075тенге тенге';
+            break;
+        default:
+            aut_t16.innerHTML = '15000 тенге';
+    }
+    input_t16.value = '';
+}

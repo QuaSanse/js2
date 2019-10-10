@@ -8,3 +8,7 @@ body {
 article {
     margin: 10px;
 }
+
+input {
+    width: 220px;
+}
