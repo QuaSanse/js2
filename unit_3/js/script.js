@@ -286,8 +286,9 @@ button_t14.onclick = () => {
         aut_t14.innerHTML = '90% смертность за 2 недели';
     } else if (vl_t14 > 600) {
         aut_t14.innerHTML = 'смертность 100%';
-    }
-    input_t14.value = '';
+    } else {
+        aut_t14.innerHTML = '';
+    } input_t14.value = '';
 }
 
 // Task 15.
@@ -338,4 +339,110 @@ button_t16.onclick = () => {
             aut_t16.innerHTML = '15000 тенге';
     }
     input_t16.value = '';
+}
+
+// Task 17.
+// Создайте 2 инпута.
+// В первый пользователь может ввести число денег в долларах.
+// Во второй - строку euro, rub, uah.
+// Используя if, elseif сделайте по нажатию кнопки пересчет в ту валюту, которую ввел пользователь.
+
+let input_t17_1 = document.querySelector('.input_t17_1');
+let input_t17_2 = document.querySelector('.input_t17_2');
+let button_t17 = document.querySelector('.button_t17');
+let aut_t17 = document.querySelector('.aut_t17');
+
+button_t17.onclick = () => {
+    let vl_t17_1 = +input_t17_1.value;
+    let vl_t17_2 = input_t17_2.value;
+
+    if (vl_t17_2 == 'euro') {
+        aut_t17.innerHTML = vl_t17_1 * 0.91;
+    } else if (vl_t17_2 == 'rub') {
+        aut_t17.innerHTML = vl_t17_1 * 64.22;
+    } else if (vl_t17_2 == 'uah') {
+        aut_t17.innerHTML = vl_t17_1 * 24.52;
+    }
+}
+
+// Task 18.
+// Проделайте предыдущую задачу с помощью switch case.
+
+let input_t18_1 = document.querySelector('.input_t18_1');
+let input_t18_2 = document.querySelector('.input_t18_2');
+let button_t18 = document.querySelector('.button_t18');
+let aut_t18 = document.querySelector('.aut_t18');
+
+button_t18.onclick = () => {
+    let vl_t18_1 = +input_t18_1.value;
+    let vl_t18_2 = input_t18_2.value;
+
+    switch (vl_t18_2) {
+        case 'euro':
+            aut_t18.innerHTML = vl_t18_1 * 0.91;
+            break;
+        case 'rub':
+            aut_t18.innerHTML = vl_t18_1 * 64.22;
+            break;
+        case 'uah':
+            aut_t18.innerHTML = vl_t18_1 * 24.52;
+
+    }
+}
+
+// Task 19.
+// Создайте 2 input куда пользователь может ввести числа.
+// В третий input - может ввести знак - минус, плюс, умножить, поделить.
+// С помощью if, else if по нажатию кнопки выводите результат выбранной операции на страницу.
+
+let input_t19_1 = document.querySelector('.input_t19_1');
+let input_t19_2 = document.querySelector('.input_t19_2');
+let input_t19_3 = document.querySelector('.input_t19_3');
+let button_t19 = document.querySelector('.button_t19');
+let aut_t19 = document.querySelector('.aut_t19');
+
+button_t19.onclick = () => {
+    let vl_t19_1 = +input_t19_1.value;
+    let vl_t19_2 = input_t19_2.value;
+    let vl_t19_3 = +input_t19_3.value;
+
+    if (vl_t19_2 == '-') {
+        aut_t19.innerHTML = vl_t19_1 - vl_t19_3;
+    } else if (vl_t19_2 == '+') {
+        aut_t19.innerHTML = vl_t19_1 + vl_t19_3;
+    } else if (vl_t19_2 == '*') {
+        aut_t19.innerHTML = vl_t19_1 * vl_t19_3;
+    } else if (vl_t19_2 == '/') {
+        aut_t19.innerHTML = vl_t19_1 / vl_t19_3;
+    }
+}
+
+// Task 20.
+// Проделайте предыдущую задачу с помощью switch case.
+
+let input_t20_1 = document.querySelector('.input_t20_1');
+let input_t20_2 = document.querySelector('.input_t20_2');
+let input_t20_3 = document.querySelector('.input_t20_3');
+let button_t20 = document.querySelector('.button_t20');
+let aut_t20 = document.querySelector('.aut_t20');
+
+button_t20.onclick = () => {
+    let vl_t20_1 = +input_t20_1.value;
+    let vl_t20_2 = input_t20_2.value;
+    let vl_t20_3 = +input_t20_3.value;
+
+    switch (vl_t20_2) {
+        case '-':
+            aut_t20.innerHTML = vl_t20_1 - vl_t20_3;
+            break;
+        case '+':
+            aut_t20.innerHTML = vl_t20_1 + vl_t20_3;
+            break;
+        case '*':
+            aut_t20.innerHTML = vl_t20_1 * vl_t20_3;
+            break;
+        case '/':
+            aut_t20.innerHTML = vl_t20_1 / vl_t20_3;
+            break;
+    }
 }
