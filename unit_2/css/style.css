@@ -1,11 +1,6 @@
-article {
-    margin: 10px;
+html, body {
+    font-family: serif;
 }
-
-.input_t13_1 {
-    margin-bottom: 8px;
-}
-
-.input_t19_1 {
-    margin-bottom: 8px;
+body {
+    margin: 20px;
 }
