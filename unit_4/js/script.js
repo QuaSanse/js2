@@ -38,3 +38,50 @@ btn_t4.onclick = () => {
 }
 
 // Task 5 --------------------
+let btn_t5 = document.getElementById('btn_t5');
+let aut_t5 = document.getElementById('aut_t5');
+
+btn_t5.onclick = () => {
+    let check_t5 = document.getElementById('check_t5');
+
+    if (check_t5.checked) {
+        aut_t5.innerHTML = check_t5.value;
+    } else {
+        aut_t5.innerHTML = 'false';
+    }
+}
+// Task 6 --------------------
+let inp_t6 = document.getElementById('inp_t6');
+let btn_t6 = document.getElementById('btn_t6');
+
+btn_t6.onclick = () => {
+    alert(inp_t6.value);
+}
+
+// Task 7 --------------------
+let inp_t7 = document.getElementById('inp_t7');
+let btn_t7 = document.getElementById('btn_t7');
+
+btn_t7.onclick = () => {
+    if (inp_t7.value.length < 6) {
+        console.log('длина пароля меньше 6 символов');
+    } else {
+        alert(inp_t7.value);
+    }
+}
+
+// Task 8 --------------------
+let div_t8 = document.getElementById('div_t8');
+let btn_t8_1 = document.getElementById('btn_t8_1');
+
+btn_t8_1.onclick = () => {
+    div_t8.innerHTML =
+        '<input type="text" id="inp_t8"></input>' + ' ' +
+        '<button id="btn_t8_2">Push in div</button>'
+
+    btn_t8_2.onclick = () => {
+        alert(inp_t8.value);
+        inp_t8.value = '';
+    }
+}
+
