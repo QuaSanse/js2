@@ -85,3 +85,65 @@ btn_t8_1.onclick = () => {
     }
 }
 
+// Task 9 --------------------
+let rad_t9 = document.getElementById('rad_t9');
+let btn_t9 = document.getElementById('btn_t9');
+
+btn_t9.onclick = () => {
+    if (rad_t9.checked) {
+        alert(rad_t9.value);
+    } else {
+        alert('false');
+    }
+}
+
+// Task 10 --------------------
+let col_t10 = document.getElementById('col_t10');
+let btn_t10 = document.getElementById('btn_t10');
+let div_t10 = document.getElementById('div_t10');
+
+btn_t10.onclick = () => {
+    console.log(col_t10.value);
+    div_t10.style.backgroundColor = col_t10.value;
+}
+
+// Task 11 --------------------
+let col_t11_1 = document.getElementById('col_t11_1');
+let col_t11_2 = document.getElementById('col_t11_2');
+let btn_t11 = document.getElementById('btn_t11');
+
+btn_t11.onclick = () => {
+    col_t11_2.value = col_t11_1.value;
+}
+
+// Task 12 --------------------
+let date_t12 = document.getElementById('date_t12');
+let btn_t12 = document.getElementById('btn_t12');
+let sp_t12 = document.getElementById('sp_t12');
+
+btn_t12.onclick = () => {
+    sp_t12.innerHTML = date_t12.value;
+}
+
+// Task 13 --------------------
+let ran_t13 = document.getElementById('ran_t13');
+let btn_t13 = document.getElementById('btn_t13');
+let sp_t13_1 = document.getElementById('sp_t13_1');
+let sp_t13_2 = document.getElementById('sp_t13_2');
+
+btn_t13.onclick = () => {
+    sp_t13_1.innerHTML = ran_t13.value;
+}
+
+ran_t13.oninput = () => {
+    sp_t13_2.innerHTML = ran_t13.value;
+}
+
+// Task 14 --------------------
+let area_t14 = document.getElementById('area_t14');
+let btn_t14 = document.getElementById('btn_t14');
+let sp_t14 = document.getElementById('sp_t14');
+
+btn_t14.onclick = () => {
+    sp_t14.innerHTML = area_t14.value;
+}
