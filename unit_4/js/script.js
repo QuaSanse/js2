@@ -147,3 +147,51 @@ let sp_t14 = document.getElementById('sp_t14');
 btn_t14.onclick = () => {
     sp_t14.innerHTML = area_t14.value;
 }
+
+// Task 15 --------------------
+let area_t15 = document.getElementById('area_t15');
+let inp_t15 = document.getElementById('inp_t15');
+let btn_t15 = document.getElementById('btn_t15');
+let sp_t15 = document.getElementById('sp_t15');
+
+btn_t15.onclick = () => {
+    area_t15.innerHTML = inp_t15.value;
+    sp_t15.innerHTML = inp_t15.value;
+    inp_t15.value = '';
+}
+
+// Task 16 --------------------
+let sel_t16 = document.getElementById('sel_t16');
+let btn_t16 = document.getElementById('btn_t16');
+let sp_t16 = document.getElementById('sp_t16');
+
+btn_t16.onclick = () => {
+    if (sel_t16.value == 'Пункт 1') {
+        sp_t16.innerHTML = sel_t16.value;
+    } else if (sel_t16.value == 'Пункт 2') {
+        sp_t16.innerHTML = sel_t16.value;
+    } else if (sel_t16.value == 'Пункт 3') {
+        sp_t16.innerHTML = sel_t16.value;
+    } else {
+        sp_t16.innerHTML = sel_t16.value;
+    }
+}
+
+// Task 17 --------------------
+
+
+// Task 18 --------------------
+let sel_t18 = document.getElementById('sel_t18');
+let sp_t18 = document.getElementById('sp_t18');
+
+sel_t18.onchange = () => {
+    if (sel_t18.value == 'Пункт 1') {
+        sp_t18.innerHTML = sel_t18.value;
+    } else if (sel_t18.value == 'Пункт 2') {
+        sp_t18.innerHTML = sel_t18.value;
+    } else if (sel_t18.value == 'Пункт 3') {
+        sp_t18.innerHTML = sel_t18.value;
+    } else {
+        sp_t18.innerHTML = sel_t18.value;
+    }
+}
