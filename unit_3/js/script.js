@@ -38,8 +38,8 @@ let button_t4 = document.querySelector('.button_t4');
 let aut_t4 = document.querySelector('.aut_t4');
 
 button_t4.onclick = () => {
-    let vl_t4_1 = input_t4_1.value;
-    let vl_t4_2 = input_t4_2.value;
+    let vl_t4_1 = +input_t4_1.value;
+    let vl_t4_2 = +input_t4_2.value;
 
     if (vl_t4_1 > vl_t4_2) {
         aut_t4.innerHTML = vl_t4_1;
@@ -58,7 +58,7 @@ let aut_t5 = document.querySelector('.aut_t5');
 
 
 button_t5.onclick = () => {
-    let vl_t5 = input_t5.value;
+    let vl_t5 = +input_t5.value;
 
     if (vl_t5 < 2000) {
         aut_t5.innerHTML = 2019 - vl_t5;
@@ -73,7 +73,7 @@ let input_t6 = document.querySelector('.input_t6');
 let aut_t6 = document.querySelector('.aut_t6');
 
 input_t6.oninput = () => {
-    let vl_t6 = input_t6.value;
+    let vl_t6 = +input_t6.value;
 
     if (vl_t6 >= 1 && vl_t6 <= 32) {
         aut_t6.innerHTML = 'Такая квартира есть!';
@@ -91,7 +91,7 @@ let button_t7 = document.querySelector('.button_t7');
 let aut_t7 = document.querySelector('.aut_t7');
 
 button_t7.onclick = () => {
-    let vl_t7 = input_t7.value;
+    let vl_t7 = +input_t7.value;
 
     if (vl_t7 < 0) {
         aut_t7.innerHTML = 'Меньше нуля это число';
@@ -107,7 +107,7 @@ let button_t8 = document.querySelector('.button_t8');
 let aut_t8 = document.querySelector('.aut_t8');
 
 button_t8.onclick = () => {
-    let vl_t8 = input_t8.value;
+    let vl_t8 = +input_t8.value;
 
     if (vl_t8 % 2) {
         aut_t8.innerHTML = 'Число не четное';
@@ -124,8 +124,8 @@ let button_t9 = document.querySelector('.button_t9');
 let aut_t9 = document.querySelector('.aut_t9');
 
 button_t9.onclick = () => {
-    let vl_t9_1 = input_t9_1.value;
-    let vl_t9_2 = input_t9_2.value;
+    let vl_t9_1 = +input_t9_1.value;
+    let vl_t9_2 = +input_t9_2.value;
 
     if (vl_t9_1 != '' && vl_t9_2 != '') {
         aut_t9.innerHTML = vl_t9_1 ** vl_t9_2;
@@ -212,7 +212,7 @@ let button_t14 = document.querySelector('.button_t14');
 let aut_t14 = document.querySelector('.aut_t14');
 
 button_t14.onclick = () => {
-    let vl_t14 = input_t14.value;
+    let vl_t14 = +input_t14.value;
 
     if (vl_t14 >= 0 && vl_t14 <= 25) {
         aut_t14.innerHTML = 'не обнаруживается';
@@ -246,7 +246,7 @@ let button_t16 = document.querySelector('.button_t16');
 let aut_t16 = document.querySelector('.aut_t16');
 
 button_t16.onclick = () => {
-    let vl_t16 = input_t16.value;
+    let vl_t16 = +input_t16.value;
 
     switch (true) {
         case vl_t16 >= 0 && vl_t16 <= 499:
