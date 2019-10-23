@@ -195,3 +195,24 @@ sel_t18.onchange = () => {
         sp_t18.innerHTML = sel_t18.value;
     }
 }
+
+// Task 19 --------------------
+let inp_t19 = document.getElementById('inp_t19');
+let pass_t19 = document.getElementById('pass_t19');
+let btn_t19 = document.getElementById('btn_t19');
+
+btn_t19.onclick = (event) => {
+    event.preventDefault();
+    console.log(inp_t19.value);
+    console.log(pass_t19.value);
+}
+
+// Task 20 --------------------
+let btn_t20 = document.getElementById('btn_t20');
+
+btn_t20.onclick = (event) => {
+    event.preventDefault();
+    let form = document.querySelector('.form_t20');
+    console.log(form.elements.inp_t20.value);
+    console.log(form.elements.pass_t20.value);
+}
