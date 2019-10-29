@@ -101,6 +101,45 @@ for (let i = 1901; i <= 1950; i++) {
 let div = document.querySelectorAll('.one');
 let sp_t11 = document.querySelector('.sp_t11');
 
+aut_t11 = '';
 for (let i = 0; i <= div.length; i++) {
-    sp_t11.innerHTML = i;
+    aut_t11 = i;
+} sp_t11.innerHTML = 'Количество div.one: ' + aut_t11;
+
+//Task 12 --------------------
+let btn_t12 = document.querySelector('.btn_t12');
+
+btn_t12.onclick = () => {
+    for (let i = 0; i < div.length; i++) {
+        div[i].style.background = 'orange';
+    }
+}
+
+//Task 13 --------------------
+let btn_t13 = document.querySelector('.btn_t13');
+
+btn_t13.onclick = () => {
+    for (let i = 0; i < div.length; i++) {
+        console.log(div[i]);
+    }
+}
+
+//Task 14 --------------------
+let input = document.querySelectorAll('input[type="text"]');
+let btn_t14 = document.querySelector('.btn_t14');
+//console.log(input);
+btn_t14.onclick = () => {
+    for (let i = 0; i < input.length; i++) {
+        input[i].placeholder = 'Введите данные';
+    }
+}
+
+//Task 15 --------------------
+let btn_t15 = document.querySelector('.btn_t15');
+
+aut_t15 = '';
+btn_t15.onclick = () => {
+    for (let i = 0; i < input.length; i++) {
+        aut_t15 = input.length;
+    } console.log('Количество input: ' + aut_t15);
 }
