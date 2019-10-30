@@ -143,3 +143,24 @@ btn_t15.onclick = () => {
         aut_t15 = input.length;
     } console.log('Количество input: ' + aut_t15);
 }
+
+//Task 16 --------------------
+let rb = document.querySelectorAll('input[type="radio"]');
+let btn_t16 = document.querySelector('.btn_t16');
+let sp_t16 = document.querySelector('.sp_t16');
+
+btn_t16.onclick = () => {
+    for (let i = 0; i < rb.length; i++) {
+        if (rb[i].checked) {
+            sp_t16.innerHTML = 'Выбран: ' + rb[i].value;
+        }
+    }
+}
+//Task 17 --------------------
+// let btn_t17 = document.querySelector('.btn_t17');
+// console.log(rb);
+// btn_t17.onclick = () => {
+//     for (let i = rb.length; i >= 0; i--) {
+//         rb.checked = i;
+//     }
+// } не решено, отложено
