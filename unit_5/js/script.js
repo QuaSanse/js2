@@ -157,10 +157,17 @@ btn_t16.onclick = () => {
     }
 }
 //Task 17 --------------------
-// let btn_t17 = document.querySelector('.btn_t17');
-// console.log(rb);
-// btn_t17.onclick = () => {
-//     for (let i = rb.length; i >= 0; i--) {
-//         rb.checked = i;
-//     }
-// } не решено, отложено
+let btn_t17 = document.querySelector('.btn_t17');
+
+btn_t17.onclick = () => {
+    rb[0].checked = true;
+}
+
+//Task 18 --------------------
+let rb_p1 = document.querySelectorAll('input[name="p1"]');
+console.log(rb_p1);
+
+for (let i = 0; i < rb_p1.length; i++) {
+    console.log(rb_p1[i]);
+    rb_p1[i].value = i;
+}
