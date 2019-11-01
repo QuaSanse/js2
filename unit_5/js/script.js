@@ -165,9 +165,31 @@ btn_t17.onclick = () => {
 
 //Task 18 --------------------
 let rb_p1 = document.querySelectorAll('input[name="p1"]');
-console.log(rb_p1);
 
 for (let i = 0; i < rb_p1.length; i++) {
-    console.log(rb_p1[i]);
     rb_p1[i].value = i;
+}
+
+//Task 19 --------------------
+let rb_p2 = document.querySelectorAll('input[name="p2"]');
+let btn_t19 = document.querySelector('.btn_t19');
+let sp_t19 = document.querySelector('.sp_t19');
+
+btn_t19.onclick = () => {
+    for (let i = 0; i < rb_p2.length; i++) {
+        if (rb_p2[i].checked && rb_p2[i].value == 6) {
+            sp_t19.innerHTML = 'true';
+        } else {
+            sp_t19.innerHTML = 'false';
+        }
+    }
+}
+
+//Task 20 --------------------
+let rb_p3 = document.querySelectorAll('input[name="p3"]');
+
+for (let i = 0; i < rb_p3.length; i++) {
+    rb_p3[i].oninput = () => {
+        console.log('был изменен input');
+    }
 }
