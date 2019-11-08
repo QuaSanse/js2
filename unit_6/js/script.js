@@ -225,16 +225,6 @@ let sp_pt6 = document.getElementById('sp_pt6');
 
 aut_pt6 = '';
 for (let i = 3; i > 0; i--) {
-    // switch (i) {
-    //     case 0:
-    //         aut_pt6 += '<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-    //         break;
-    //     case 1:
-    //         aut_pt6 += '<br> &nbsp;&nbsp;&nbsp;&nbsp;';
-    //         break;
-    //     case 2:
-    //         aut_pt6 += '<br> &nbsp;&nbsp;&nbsp;';
-    // }
     for (let k = 0; k < 5; k++) {
         switch (true) {
             case k < i + 2:
@@ -248,11 +238,18 @@ for (let i = 3; i > 0; i--) {
 // Task 7 --------------------
 let sp_pt7 = document.getElementById('sp_pt7');
 
-aut_pt7 = '';
+let aut_pt7 = '';
+let pt7_1 = 3;
+let pt7_2 = 3;
+let pt7_3 = 7;
 for (let i = 0; i < 5; i++) {
-    aut_pt7 += '<br>' + i + ' &nbsp;&nbsp;&nbsp;';
-
-    for (let k = 0; k <= i; k++) {
-        aut_pt7 += '*';
+    for (let k = 0; k < 9; k++) {
+        switch (true) {
+            case k < pt7_1 || k > pt7_2 || k > pt7_3: aut_pt7 += '&nbsp;'; break;
+            default: aut_pt7 += '*';
+        }
     }
+    pt7_2++;
+    pt7_3--;
+    aut_pt7 += '<br>';
 } sp_pt7.innerHTML = aut_pt7;
