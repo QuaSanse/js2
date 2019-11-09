@@ -253,3 +253,77 @@ for (let i = 0; i < 5; i++) {
     pt7_3--;
     aut_pt7 += '<br>';
 } sp_pt7.innerHTML = aut_pt7;
+
+// Task 8 --------------------
+let sp_pt8 = document.getElementById('sp_pt8');
+
+let aut_pt8 = '';
+
+for (let i = 0; i < 5; i++) {
+    for (let k = 0; k < 10; k++) {
+        if (k < 4 || k != 4 && k != 9 && i >= 1 && i <= 3) {
+            aut_pt8 += '<tt>&nbsp;</tt>';
+        } else {
+            aut_pt8 += '<tt>*</tt>';
+        }
+    }
+    aut_pt8 += '<br>';
+} sp_pt8.innerHTML = aut_pt8;
+
+// Task 9 --------------------
+let sp_pt9 = document.getElementById('sp_pt9');
+let inp_pt9 = document.getElementById('inp_pt9');
+
+inp_pt9.oninput = () => {
+    let aut_pt9 = '';
+    let vl_pt9 = inp_pt9.value;
+    for (let i = 0; i < 5; i++) {
+        for (let k = 0; k < 10; k++) {
+            if (k < 4 || k != 4 && k != 9 && i >= 1 && i <= 3) {
+                aut_pt9 += '<tt>&nbsp;</tt>';
+            } else {
+                aut_pt9 += '<tt>' + vl_pt9 + '</tt>';
+            }
+        }
+        aut_pt9 += '<br>';
+    } sp_pt9.innerHTML = aut_pt9;
+    inp_pt9.value = '';
+}
+
+// Task 10 --------------------
+let sp_pt10 = document.getElementById('sp_pt10');
+
+let aut_pt10 = '';
+for (let i = 6; i < 8; i++) {
+    for (let k = 0; k <= 10; k++) {
+        aut_pt10 += i + ' * ' + k + ' = ' + i * k + '<br>';
+    }
+    aut_pt10 += '<hr>';
+} sp_pt10.innerHTML = aut_pt10;
+
+// Task 11 --------------------
+let sp_pt11 = document.getElementById('sp_pt11');
+
+let aut_pt11 = '';
+for (let i = 1; i < 6; i++) {
+    for (let k = 1; k < 6; k++) {
+        switch (true) {
+            case k <= i: aut_pt11 += k + ' ';
+        }
+    }
+    aut_pt11 += '<br>';
+} sp_pt11.innerHTML = aut_pt11;
+
+// Task 12 --------------------
+let sp_pt12 = document.getElementById('sp_pt12');
+
+let aut_pt12 = '';
+for (let i = 0; i < 5; i++) {
+    for (let k = 1; k <= 10; k++) {
+        switch (true) {
+            case (i * 10 + k) < 10: { aut_pt12 += i + '' + (i * 10 + k) + ' '; break; }
+            default: { aut_pt12 += (i * 10 + k) + ' '; }
+        }
+    }
+    aut_pt12 += '<br>';
+} sp_pt12.innerHTML = aut_pt12;
