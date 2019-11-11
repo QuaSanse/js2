@@ -327,3 +327,32 @@ for (let i = 0; i < 5; i++) {
     }
     aut_pt12 += '<br>';
 } sp_pt12.innerHTML = aut_pt12;
+
+// Task 13 --------------------
+let sp_pt13 = document.getElementById('sp_pt13');
+
+let aut_pt13 = '';
+for (let i = 5; i > 0; i--) {
+    for (let k = 5; k > 0; k--) {
+        switch (true) {
+            case k <= i: aut_pt13 += k + ' ';
+        }
+
+    }
+    aut_pt13 += '<br>';
+} sp_pt13.innerHTML = aut_pt13;
+
+// Task 14 --------------------
+let sp_pt14 = document.getElementById('sp_pt14');
+
+let aut_pt14 = '';
+for (let i = 1; i < 6; i++) {
+    for (let k = 5; k > 0; k--) {
+        switch (true) {
+            case i < k: aut_pt14 += '<tt>&nbsp;&nbsp;</tt>'; break;
+            // case i < k: aut_pt14 += '_'; break;
+            default: aut_pt14 += '<tt>' + k + '</tt>' + '<tt>&nbsp;</tt>';
+        }
+    }
+    aut_pt14 += '<br>';
+} sp_pt14.innerHTML = aut_pt14;
