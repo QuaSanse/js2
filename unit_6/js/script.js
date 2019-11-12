@@ -356,3 +356,34 @@ for (let i = 1; i < 6; i++) {
     }
     aut_pt14 += '<br>';
 } sp_pt14.innerHTML = aut_pt14;
+
+// Task 15 --------------------
+let sp_pt15 = document.getElementById('sp_pt15');
+
+let aut_pt15 = '';
+for (let i = 1; i < 6; i++) {
+    for (let k = 5; k > 0; k--) {
+        switch (true) {
+            case i < k: aut_pt15 += '<tt>X&nbsp;</tt>'; break;
+            // case i < k: aut_pt14 += '_'; break;
+            default: aut_pt15 += '<tt>' + k + '</tt>' + '<tt>&nbsp;</tt>';
+        }
+    }
+    aut_pt15 += '<br>';
+} sp_pt15.innerHTML = aut_pt15;
+
+// Task 16 --------------------
+let sp_pt16 = document.getElementById('sp_pt16');
+
+let aut_pt16 = '';
+let pt16_1 = 2;
+for (let i = 1; i < 6; i++) {
+    for (let k = 0; k < 10; k++) {
+        switch (true) {
+            case k < pt16_1: aut_pt16 += '&nbsp;'; break;
+            case k < i + 2: aut_pt16 += i + '&nbsp;'; break;
+            default: aut_pt16 += '&nbsp;';
+        }
+    }
+    aut_pt16 += '<br>';
+} sp_pt16.innerHTML = aut_pt16;
