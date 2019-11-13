@@ -387,3 +387,69 @@ for (let i = 1; i < 6; i++) {
     }
     aut_pt16 += '<br>';
 } sp_pt16.innerHTML = aut_pt16;
+
+// Task 17 --------------------
+let sp_pt17 = document.getElementById('sp_pt17');
+
+let aut_pt17 = '';
+// let pt16_1 = 2;
+for (let i = 6; i > 0; i--) {
+    for (let k = 0; k < 5; k++) {
+        switch (true) {
+            case k + 1 >= i: aut_pt17 += i + '&nbsp;&nbsp;';
+        }
+    }
+    aut_pt17 += '<br>';
+} sp_pt17.innerHTML = aut_pt17;
+
+// Task 18 --------------------
+let sp_pt18 = document.getElementById('sp_pt18');
+
+let aut_pt18 = '';
+for (let i = 5; i > 0; i--) {
+    for (let k = 0; k <= 5; k++) {
+        switch (true) {
+            case k >= i && i % 2 == 0: aut_pt18 += 'x' + '&nbsp;&nbsp;'; break;
+            case k >= i: aut_pt18 += i + '&nbsp;&nbsp;';
+        }
+    }
+    aut_pt18 += '<br>';
+} sp_pt18.innerHTML = aut_pt18;
+
+// Task 19 --------------------
+let sp_pt19 = document.getElementById('sp_pt19');
+
+let aut_pt19 = '';
+let pt19_1 = 5;
+let pt19_2 = 9;
+for (let i = 0; i < 3; i++) {
+    for (let k = 0; k < 12; k++) {
+        switch (true) {
+            case k < pt19_1 || k > pt19_2: aut_pt19 += '&nbsp;'; break;
+            default: aut_pt19 += '*';
+        }
+    }
+    pt19_1--;
+    pt19_2++;
+    aut_pt19 += '<br>';
+} sp_pt19.innerHTML = aut_pt19;
+
+// Task 20 --------------------
+let sp_pt20 = document.getElementById('sp_pt20');
+
+let aut_pt20 = '';
+let pt20_1 = 5;
+let pt20_2 = 6;
+for (let i = 0; i < 5; i++) {
+    for (let k = 0; k < 12; k++) {
+        switch (true) {
+            case k < pt20_1 || k > pt20_2: aut_pt20 += '&nbsp;'; break;
+            case i > 2 && k + 5 < pt20_2: aut_pt20 += '&nbsp;'; break;
+            case i > 2 && k - 5 > pt20_1: aut_pt20 += '&nbsp;'; break;
+            default: aut_pt20 += '*';
+        }
+    }
+    pt20_1--;
+    pt20_2++;
+    aut_pt20 += '<br>';
+} sp_pt20.innerHTML = aut_pt20;
