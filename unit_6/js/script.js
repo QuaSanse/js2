@@ -117,9 +117,9 @@ aut_t10 = '';
 for (let i = 0; i < 5; i++) {
     for (let k = 1; k <= 10; k++) {
         if ((i * 10 + k) < 10) {
-            aut_t10 += '0' + (i * 10 + k) + ' ';
+            aut_t10 += `0${i * 10 + k}&nbsp;`;
         } else {
-            aut_t10 += (i * 10 + k) + '&nbsp;';
+            aut_t10 += `${i * 10 + k}&nbsp;`;
         }
     }
     aut_t10 += '<br>';
@@ -134,8 +134,7 @@ for (let i = 0; i < 3; i++) {
     for (let k = 0; k < 8; k++) {
         switch (true) {
             case k < 3:
-                aut_pt1 += '&nbsp;';
-                break;
+                aut_pt1 += '&nbsp;'; break;
             default:
                 aut_pt1 += '*';
         }
@@ -150,14 +149,9 @@ aut_pt2 = '';
 for (let i = 0; i < 3; i++) {
     for (let k = 0; k < 9; k++) {
         switch (true) {
-            case k < 3:
-                aut_pt2 += '&nbsp;';
-                break;
-            case (k % 2 == 0):
-                aut_pt2 += '0';
-                break;
-            default:
-                aut_pt2 += '1';
+            case k < 3: aut_pt2 += '&nbsp;'; break;
+            case (k % 2 == 0): aut_pt2 += '0'; break;
+            default: aut_pt2 += '1';
         }
     }
     aut_pt2 += '<br>';
@@ -168,8 +162,6 @@ let sp_pt3 = document.getElementById('sp_pt3');
 
 aut_pt3 = '';
 for (let i = 0; i < 3; i++) {
-    // aut_pt3 += '<br> &nbsp;&nbsp;&nbsp;';
-
     for (let k = 0; k < 9; k++) {
         if (k < 3) {
             aut_pt3 += '&nbsp;';
@@ -193,11 +185,8 @@ aut_pt4 = '';
 for (let i = 0; i < 3; i++) {
     for (let k = 0; k <= i + 3; k++) {
         switch (true) {
-            case k < 3:
-                aut_pt4 += '&nbsp;';
-                break;
-            default:
-                aut_pt4 += '*';
+            case k < 3: aut_pt4 += '&nbsp;'; break;
+            default: aut_pt4 += '*';
         }
     }
     aut_pt4 += '<br>';
@@ -210,11 +199,8 @@ aut_pt5 = '';
 for (let i = 5; i > 0; i--) {
     for (let k = 0; k < i + 3; k++) {
         switch (true) {
-            case k < 3:
-                aut_pt5 += '&nbsp;';
-                break;
-            default:
-                aut_pt5 += '*';
+            case k < 3: aut_pt5 += '&nbsp;'; break;
+            default: aut_pt5 += '*';
         }
     }
     aut_pt5 += '<br>';
@@ -227,9 +213,7 @@ aut_pt6 = '';
 for (let i = 3; i > 0; i--) {
     for (let k = 0; k < 5; k++) {
         switch (true) {
-            case k < i + 2:
-                aut_pt6 += '&nbsp;';
-                break;
+            case k < i + 2: aut_pt6 += '&nbsp;';
         }
     }
     aut_pt6 += '***** <br>';
@@ -258,7 +242,6 @@ for (let i = 0; i < 5; i++) {
 let sp_pt8 = document.getElementById('sp_pt8');
 
 let aut_pt8 = '';
-
 for (let i = 0; i < 5; i++) {
     for (let k = 0; k < 10; k++) {
         if (k < 4 || k != 4 && k != 9 && i >= 1 && i <= 3) {
@@ -296,7 +279,7 @@ let sp_pt10 = document.getElementById('sp_pt10');
 let aut_pt10 = '';
 for (let i = 6; i < 8; i++) {
     for (let k = 0; k <= 10; k++) {
-        aut_pt10 += i + ' * ' + k + ' = ' + i * k + '<br>';
+        aut_pt10 += `${i} * ${k} =  ${i * k}<br>`;
     }
     aut_pt10 += '<hr>';
 } sp_pt10.innerHTML = aut_pt10;
@@ -321,8 +304,8 @@ let aut_pt12 = '';
 for (let i = 0; i < 5; i++) {
     for (let k = 1; k <= 10; k++) {
         switch (true) {
-            case (i * 10 + k) < 10: { aut_pt12 += i + '' + (i * 10 + k) + ' '; break; }
-            default: { aut_pt12 += (i * 10 + k) + ' '; }
+            case (i * 10 + k) < 10: aut_pt12 += `${i}${i * 10 + k}&nbsp;`; break;
+            default: aut_pt12 += `${i * 10 + k}&nbsp;`;
         }
     }
     aut_pt12 += '<br>';
@@ -349,9 +332,8 @@ let aut_pt14 = '';
 for (let i = 1; i < 6; i++) {
     for (let k = 5; k > 0; k--) {
         switch (true) {
-            case i < k: aut_pt14 += '<tt>&nbsp;&nbsp;</tt>'; break;
-            // case i < k: aut_pt14 += '_'; break;
-            default: aut_pt14 += '<tt>' + k + '</tt>' + '<tt>&nbsp;</tt>';
+            case i < k: aut_pt14 += `<tt>&nbsp;&nbsp;</tt>`; break;
+            default: aut_pt14 += `<tt>${k}&nbsp;</tt>`;
         }
     }
     aut_pt14 += '<br>';
@@ -365,8 +347,7 @@ for (let i = 1; i < 6; i++) {
     for (let k = 5; k > 0; k--) {
         switch (true) {
             case i < k: aut_pt15 += '<tt>X&nbsp;</tt>'; break;
-            // case i < k: aut_pt14 += '_'; break;
-            default: aut_pt15 += '<tt>' + k + '</tt>' + '<tt>&nbsp;</tt>';
+            default: aut_pt15 += `<tt>${k}&nbsp;</tt>`;
         }
     }
     aut_pt15 += '<br>';
@@ -396,7 +377,7 @@ let aut_pt17 = '';
 for (let i = 6; i > 0; i--) {
     for (let k = 0; k < 5; k++) {
         switch (true) {
-            case k + 1 >= i: aut_pt17 += i + '&nbsp;&nbsp;';
+            case k + 1 >= i: aut_pt17 += `${i}&nbsp;&nbsp;`;
         }
     }
     aut_pt17 += '<br>';
@@ -409,8 +390,8 @@ let aut_pt18 = '';
 for (let i = 5; i > 0; i--) {
     for (let k = 0; k <= 5; k++) {
         switch (true) {
-            case k >= i && i % 2 == 0: aut_pt18 += 'x' + '&nbsp;&nbsp;'; break;
-            case k >= i: aut_pt18 += i + '&nbsp;&nbsp;';
+            case k >= i && i % 2 == 0: aut_pt18 += `x&nbsp;&nbsp;`; break;
+            case k >= i: aut_pt18 += `${i}&nbsp;&nbsp;`;
         }
     }
     aut_pt18 += '<br>';
