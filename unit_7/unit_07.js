@@ -81,11 +81,12 @@ function t7() {
     let x = Math.floor(Math.random() * 256);
     let y = Math.floor(Math.random() * 256);
     let z = Math.floor(Math.random() * 256);
-    return x, y, z;
+    return `rgb(${x},${y},${z})`;
 }
-
 document.querySelector('.b-7').onclick = function () {
-    document.querySelector('.out-7').style.background = `rgb${t7()}`;
+    let out7 = document.querySelector('.out-7');
+    out7.innerHTML = t7();
+    out7.style.backgroundColor = t7();
 }
 
 
