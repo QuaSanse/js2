@@ -94,11 +94,13 @@ document.querySelector('.b-7').onclick = function () {
 // Напишите функцию t8, которая принимает строку в качестве параметра и возвращает результат с очищенными пробелами в начале и вконце строки.Т.е.принимает _hello_(где знак _ символизирует пробел), а возвращает hello.Для удаления пробелов - используйте trim.
 
 function t8(str) {
-
+    return str.trim();
+    // return str;
 }
 
 document.querySelector('.b-8').onclick = function () {
-    document.querySelector('.out-8').textContent = t8('  Hello  ');
+    // document.querySelector('.out-8').textContent = t8('  Hello  ');
+    document.querySelector('.out-8').textContent = t8('     Hello     ');
 }
 
 
@@ -106,7 +108,8 @@ document.querySelector('.b-8').onclick = function () {
 // Напишите функцию t9, которая принимает число и возвращает true, если число четное, и false если не четное. 
 
 function t9(num) {
-
+    if (num % 2 == 0) { return true; }
+    else { return false };
 }
 
 document.querySelector('.b-9').onclick = function () {
@@ -118,7 +121,10 @@ document.querySelector('.b-9').onclick = function () {
 // Создайте функцию t10, которая принимает 2 числа и возвращает большее из них.В случае равенства - любое из чисел.
 
 function t10(a, b) {
-
+    switch (true) {
+        case a > b: return a;
+        default: return b;
+    }
 }
 
 document.querySelector('.b-10').onclick = function () {
