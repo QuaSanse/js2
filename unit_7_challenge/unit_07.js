@@ -1,57 +1,45 @@
 // Task 1
-// Напишите функцию t1, которая при нажатии кнопки выводит в out - 1 переменную a1.
-
-let a1 = 8;
 function t1() {
-    document.querySelector('.out-1').innerHTML = a1;
+    return 'Dima';
 }
 
-document.querySelector('.b-1').onclick = t1;
+document.querySelector('.b-1').onclick = () => {
+    document.querySelector('.out-1').innerHTML = t1();
+}
 
 
 // Task 2.
-
-// Изменим задачу 1. Сейчас она только выводит переменную в заранее заданный блок.Давайте сделаем так, чтобы функция, была более гибкой.Пусть теперь функция t2 возвращает переменную a2.Поскольку функция возвращает переменную, то имя функции со скобками(вызов функции) можно встраивать в выражения.Обратите внимание, как изменяется вызов функции теперь.
-
-let a2 = 8;
-function t2() {
-    return a2;
+function t2(name2 = 'Ivan') {
+    return name2;
 }
 
 document.querySelector('.b-2').onclick = function () {
-    document.querySelector('.out-2').textContent = t2();
+    document.querySelector('.out-2').textContent = t2('Sergey');
 }
+
 
 // Task 3.
-// Наша предыдущая функция, сильно все еще зависима от внешних переменных.Давайте сделаем ее более универсальной.Пусть функция t3 принимает 2 параметра и выводит их произведение.Допишите код функции так, чтобы она возвращала произведение двух чисел, переданных ей в качестве параметра a, b.Протестируем функцию на двух примерах, с помощью кнопок b-3-1 и b-3-2.
+function t3(a) {
+    return a * 10;
+}
+console.log(t3(6));
 
-function t3(a, b) {
-    return a + b;
+document.querySelector('.b-3').onclick = function () {
+    document.querySelector('.out-3').textContent = t3(22);
 }
 
-document.querySelector('.b-3-1').onclick = function () {
-    document.querySelector('.out-3-1').textContent = t3(3, 4);
-}
-document.querySelector('.b-3-2').onclick = function () {
-    document.querySelector('.out-3-2').textContent = t3(5, 6);
-}
 
 // Task 4
-// Напишите функцию t4 которая принимает ваш год рождения  и вычисляет ваш возраст. 
-
-function t4(year) {
-    return 2019 - year;
+function t4() {
+    return 'red';
 }
 
-document.querySelector('.b-4').onclick = function () {
-    document.querySelector('.out-4').textContent = t4(1983);
+document.querySelector('.b-4').onclick = () => {
+    document.querySelector('.b-4').style.backgroundColor = t4();
 }
 
 
 // Task 5
-// Напишите функцию t5, которая принимает ваше имя в качестве параметра и возвращает строку Hello name, где name - принятое в качестве параметра имя.
-
-
 function t5(yourName) {
     return `Hello ${yourName}`;
 }
@@ -95,9 +83,11 @@ document.querySelector('.b-7').onclick = function () {
 
 function t8(str) {
     return str.trim();
+    // return str;
 }
 
 document.querySelector('.b-8').onclick = function () {
+    // document.querySelector('.out-8').textContent = t8('  Hello  ');
     document.querySelector('.out-8').textContent = t8('     Hello     ');
 }
 

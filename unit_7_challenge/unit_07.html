@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit 07</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Unit 07 challenge. Функции</h1>
+        <h2>Задачи на прокачку</h2>
+
+        <section>
+            <p><b>Task 1.</b></p>
+            <p>Создайте функцию (именнованную), которая при клике на кнопке выводит в консоль ваше имя.</p>
+            <button class="button-primary b-1">Task-1</button>
+            <div class="out-1"></div>
+        </section>
+
+        <section>
+            <p><b>Task 2.</b></p>
+            <p>Создайте функцию (именованную). Функция должна примать один параметр - имя (например Ivan) и выводить имя
+                переданное ей в консоль. Запустите функцию и передайте в качестве имени Sergey.
+            </p>
+            <button class="button-primary b-2">Task-2</button>
+            <div class="out-2"></div>
+        </section>
+
+        <section>
+            <p><b>Task 3.</b></p>
+            <p>Создайте именнованную функцию, которая принимает параметр число и выводит его значение умноженное на 10 в
+                консоль. Запустите выполнение функции. Убедитесь, что она работает. Теперь создайте кнопку и добавьте на
+                нее событие onclick которое вызывает данную функцию с параметром.<br>
+
+                Если вы напишите, подобный синтаксис elem.onclick = myFunc(11), то увидите, что данная функция -
+                выполняется сразу при загрузке страницы! Действительно, ведь мы поставили скобки. Как передать параметр
+                и не запустить функцию сразу? Довольно хитро:
+            </p>
+            <pre>
+                elem.onclick = function(){<br>
+                    myFunc(22);<br>
+                }
+            </pre>
+
+            <p>
+                Т.е. использовать обертку из анонимной функции.
+            </p>
+            <button class="button-primary b-3">Task-3</button>
+            <div class="out-3"></div>
+        </section>
+
+        <section>
+            <p><b>Task 4.</b></p>
+            <p>Создайте кнопку и функцию. При нажатии кнопки, функция окрашивает данную кнопку в background: red</p>
+            <button class="button-primary b-4">Task-4</button>
+            <div class="out-4"></div>
+        </section>
+
+        <section>
+            <p><b>Task 5.</b></p>
+            <p>Напишите функцию t5, которая принимает ваше имя в качестве параметра и возвращает строку Hello name, где
+                name - принятое в качестве параметра имя.</p>
+            <button class="button-primary b-5">Task-5</button>
+            <div class="out-5"></div>
+        </section>
+
+        <section>
+            <p><b>Task 6.</b></p>
+            <p>Напишите функцию t6, которая принимает 2 числа и возвращает случайное целое число от первого до второго
+                принятого параметра.
+            </p>
+            <button class="button-primary b-6">Task-6</button>
+            <div class="out-6"></div>
+        </section>
+
+        <section>
+            <p><b>Task 7.</b></p>
+            <p>Напишите функцию t7, которая возвращает случайный цвет в формате rgb(x,y,z) (строка). Где x,y,z -
+                случайные числа в диапазоне [0, 255].
+            </p>
+            <button class="button-primary b-7">Task-7</button>
+            <div class="out-7"></div>
+        </section>
+
+        <section>
+            <p><b>Task 8.</b></p>
+            <p>Напишите функцию t8, которая принимает строку в качестве параметра и возвращает результат с очищенными
+                пробелами в начале и вконце строки. Т.е. принимает _hello_ (где знак _ символизирует пробел), а
+                возвращает hello. Для удаления пробелов - используйте trim.
+
+            </p>
+            <button class="button-primary b-8">Task-8</button>
+            <div class="out-8"></div>
+        </section>
+
+        <section>
+            <p><b>Task 9.</b></p>
+            <p>Напишите функцию t9, которая принимает число и возвращает true, если число четное, и false если не
+                четное.
+            </p>
+            <button class="button-primary b-9">Task-9</button>
+            <div class="out-9"></div>
+        </section>
+
+        <section>
+            <p><b>Task 10.</b></p>
+            <p>Создайте функцию t10, которая принимает 2 числа и возвращает большее из них. В случае равенства - любое
+                из чисел.
+            </p>
+            <button class="button-primary b-10">Task-10</button>
+            <div class="out-10"></div>
+        </section>
+
+    </div>
+
+    <script src="unit_07.js"></script>
+</body>
+
+</html>
