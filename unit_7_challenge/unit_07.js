@@ -40,21 +40,24 @@ document.querySelector('.b-4').onclick = () => {
 
 
 // Task 5
-function t5(yourName) {
+function t5() {
+    let yourName = document.querySelector('.inp_t5').value;
     return `Hello ${yourName}`;
 }
 
 document.querySelector('.b-5').onclick = function () {
-    document.querySelector('.out-5').textContent = t5('Alex');
+    document.querySelector('.out-5').textContent = t5();
+    document.querySelector('.inp_t5').value = '';
 }
 
 
-
 // Task 6
-// Напишите функцию t6, которая принимает 2 числа и возвращает случайное целое число от первого до второго принятого параметра. 
-
+let out_t6 = document.querySelector('.out-6');
 function t6(a, b) {
-    return Math.floor(Math.random() * (b - a)) + a;
+    switch (true) {
+        case a >= b: return out_t6.innerHTML = a;
+        default: return out_t6.innerHTML = b;
+    }
 }
 
 document.querySelector('.b-6').onclick = function () {
@@ -63,32 +66,21 @@ document.querySelector('.b-6').onclick = function () {
 
 
 // Task 7
-// Напишите функцию t7, которая возвращает случайный цвет в формате rgb(x, y, z)(строка).Где x, y, z - случайные числа в диапазоне[0, 255]. 
-
-function t7() {
-    let x = Math.floor(Math.random() * 256);
-    let y = Math.floor(Math.random() * 256);
-    let z = Math.floor(Math.random() * 256);
-    return `rgb(${x},${y},${z})`;
+function t7(a) {
+    return 2019 - a;
 }
 document.querySelector('.b-7').onclick = function () {
-    let out7 = document.querySelector('.out-7');
-    out7.innerHTML = t7();
-    out7.style.backgroundColor = t7();
+    document.querySelector('.out-7').textContent = t7(1978);
 }
 
 
 // Task 8
-// Напишите функцию t8, которая принимает строку в качестве параметра и возвращает результат с очищенными пробелами в начале и вконце строки.Т.е.принимает _hello_(где знак _ символизирует пробел), а возвращает hello.Для удаления пробелов - используйте trim.
-
-function t8(str) {
-    return str.trim();
-    // return str;
+function t8(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
 document.querySelector('.b-8').onclick = function () {
-    // document.querySelector('.out-8').textContent = t8('  Hello  ');
-    document.querySelector('.out-8').textContent = t8('     Hello     ');
+    document.querySelector('.out-8').innerHTML = t8(1, 10);
 }
 
 
