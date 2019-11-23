@@ -75,38 +75,88 @@ document.querySelector('.b-7').onclick = function () {
 
 
 // Task 8
-function t8(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
+function t8() {
+    return Math.floor(Math.random() * (10 - 1)) + 1;
 }
 
 document.querySelector('.b-8').onclick = function () {
-    document.querySelector('.out-8').innerHTML = t8(1, 10);
+    document.querySelector('.out-8').innerHTML = t8();
 }
 
 
 // Task 9
-// Напишите функцию t9, которая принимает число и возвращает true, если число четное, и false если не четное. 
-
-function t9(num) {
-    if (num % 2 == 0) { return true; }
-    else { return false };
+function t9(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
 document.querySelector('.b-9').onclick = function () {
-    document.querySelector('.out-9').textContent = t9(15);
+    document.querySelector('.out-9').textContent = t9(5, 20);
 }
 
 
 // Task 10
-// Создайте функцию t10, которая принимает 2 числа и возвращает большее из них.В случае равенства - любое из чисел.
-
-function t10(a, b) {
-    switch (true) {
-        case a > b: return a;
-        default: return b;
-    }
+function t10(x, y, z) {
+    return `rgb(${Math.floor(Math.random(x) * 256)},${Math.floor(Math.random(y) * 256)},${Math.floor(Math.random(z) * 256)})`;
 }
 
 document.querySelector('.b-10').onclick = function () {
-    document.querySelector('.out-10').textContent = t10(3, 9);
+    document.querySelector('.out-10').textContent = t10();
+    document.querySelector('.out-10').style.backgroundColor = t10();
+}
+
+// Task 11
+function f11(a) {
+    return a;
+}
+let par1 = f11(2);
+console.log(par1);
+
+function f11_2(a, b) {
+    return a * b;
+}
+
+document.querySelector('.b-11').onclick = function () {
+    document.querySelector('.out-11').textContent = f11_2(par1, 5);
+}
+
+
+// Task 12
+function toNum(inp = document.querySelector('.inpt12')) {
+    return +inp.value;
+}
+
+document.querySelector('.b-12').onclick = () => {
+    document.querySelector('.out-12').textContent = toNum();
+    document.querySelector('.inpt12').value = '';
+}
+
+
+// Task 13
+function emptyInput(inp = document.querySelector('.inpt13')) {
+    if (inp.value.trim() == '') { return false; }
+    else { return inp.value.trim(); }
+}
+
+document.querySelector('.b-13').onclick = () => {
+    document.querySelector('.out-13').textContent = emptyInput();
+}
+
+
+// Task 14
+function t14(inp = document.querySelector('.inpt14').value) {
+    switch (true) {
+        // case inp != isInteger(inp): return 'Ваше число дробное'; break;
+        case isNaN(inp): return 'Не число'; break;
+        case inp.length === 0 || !inp.trim(): return 'Введите число'; break;
+        case inp != parseInt(inp): return 'Ваше число дробное'; break;
+        case (inp ^ 0) === inp: return 'Ваше число дробное'; break;
+        case +inp % 2 == 0: return 'Ваше число четное'; break;
+        default: return 'Ваше число не четное';
+    }
+}
+
+document.querySelector('.b-14').onclick = () => {
+    document.querySelector('.out-14_1').textContent = document.querySelector('.inpt14').value;
+    document.querySelector('.out-14_2').textContent = t14();
+    document.querySelector('.inpt14').value = '';
 }
