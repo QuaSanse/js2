@@ -95,13 +95,11 @@ document.querySelector('.b-5').onclick = t5;
 // Задача решается с помощью цикла. В каждой итерации цикл выводит 6 звездочек без пробелов и символ переноса строки br.
 // Количество строк (итераций, повторений) цикла  while вводит пользователь в i-6.
 
-let out6 = document.querySelector('.out-6');
-let vl_6 = document.querySelector('.i-6');
-
 out_t6 = '';
 function t6() {
     let it = 0;
-    while (it < vl_6.value) {
+    let vl_6 = document.querySelector('.i-6').value;
+    while (it < vl_6) {
         let str = 0;
         while (str < 6) {
             out_t6 += '*';
@@ -110,7 +108,7 @@ function t6() {
         out_t6 += ' ';
         it++;
     }
-    out6.innerHTML = out_t6;
+    document.querySelector('.out-6').innerHTML = out_t6;
 }
 
 document.querySelector('.b-6').onclick = t6;
@@ -123,8 +121,15 @@ document.querySelector('.b-6').onclick = t6;
 //     4 3 2 1
 // Задача решается с помощью цикла  while.
 
+out_t7 = '';
 function t7() {
+    let vl_t7 = document.querySelector('.i-7').value;
+    while (vl_t7 >= 0) {
 
+        out_t7 += vl_t7 + ' ';
+        vl_t7--;
+    }
+    document.querySelector('.out-7').textContent = out_t7;
 }
 
 document.querySelector('.b-7').onclick = t7;
@@ -138,8 +143,16 @@ document.querySelector('.b-7').onclick = t7;
 //     4 5 6 7 8
 // Задача решается с помощью цикла  while.
 
+out_t8 = '';
 function t8() {
+    let i_81 = document.querySelector('.i-81').value;
+    let i_82 = document.querySelector('.i-82').value;
 
+    while (i_81 <= i_82) {
+        out_t8 += i_81 + ' ';
+        i_81++;
+    }
+    document.querySelector('.out-8').textContent = out_t8;
 }
 
 document.querySelector('.b-8').onclick = t8;
