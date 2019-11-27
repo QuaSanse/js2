@@ -167,8 +167,23 @@ document.querySelector('.b-8').onclick = t8;
 // 6 7 8
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл  while.
 
+out_t9 = '';
 function t9() {
+    let i_91 = document.querySelector('.i-91').value;
+    let i_92 = document.querySelector('.i-92').value;
 
+    if (i_91 < i_92) {
+        while (i_91 <= i_92) {
+            out_t9 += i_91 + ' ';
+            i_91++;
+        }
+    } else {
+        while (i_92 <= i_91) {
+            out_t9 += i_92 + ' ';
+            i_92++;
+        }
+    }
+    document.querySelector('.out-9').textContent = out_t9;
 }
 
 document.querySelector('.b-9').onclick = t9;
@@ -178,8 +193,14 @@ document.querySelector('.b-9').onclick = t9;
 // Кнопка b-10 запускает функцию t10. Функция должна выводить в out-10 четные годы от 1950 до 2000 включительно.
 // Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
 
+out_t10 = '';
 function t10() {
-
+    let i = 1950;
+    while (i <= 2000) {
+        out_t10 += i + ' ';
+        i = i + 2;
+    }
+    document.querySelector('.out-10').textContent = out_t10;
 }
 
 document.querySelector('.b-10').onclick = t10;
@@ -193,8 +214,16 @@ document.querySelector('.b-10').onclick = t10;
 //     one 3 4 two
 
 
+out_t11 = '';
 function t11() {
+    let div_11 = document.querySelectorAll('.div-11');
 
+    let i = 0;
+    while (i < div_11.length) {
+        out_t11 += div_11[i].textContent + ' ';
+        i++;
+    }
+    document.querySelector('.out-11').textContent = out_t11;
 }
 
 document.querySelector('.b-11').onclick = t11;
