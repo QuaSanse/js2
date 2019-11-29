@@ -251,7 +251,13 @@ document.querySelector('.b-12').onclick = t12;
 // применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
 function t13() {
+    let i_13 = document.querySelectorAll('.i-13');
 
+    let i = 0;
+    while (i < i_13.length) {
+        i_13[i].value = i + 1;
+        i++;
+    }
 }
 
 document.querySelector('.b-13').onclick = t13;
@@ -264,7 +270,15 @@ document.querySelector('.b-13').onclick = t13;
 
 
 function t14() {
+    let i_14 = document.querySelectorAll('.i-14');
 
+    let i = 0;
+    while (i < i_14.length) {
+        switch (true) {
+            case i_14[i].checked: document.querySelector('.out-14').textContent = i_14[i].value; break;
+        }
+        i++;
+    }
 }
 
 document.querySelector('.b-14').onclick = t14;
@@ -274,8 +288,18 @@ document.querySelector('.b-14').onclick = t14;
 // 10 0 9 1 8 2 7 3 6 4 5 5 4 6 3 7 2 8 1 9 0 10
 // Для вывода использовать цикл  while. Разделитель пробел.
 
-function t15() {
+let out_t15 = '';
 
+function t15() {
+    let i = 0;
+    let k = 10;
+
+    while (i <= 10) {
+        out_t15 += `${k} ${i} `;
+        i++;
+        k--;
+    }
+    document.querySelector('.out-15').textContent = out_t15;
 }
 
 document.querySelector('.b-15').onclick = t15;
