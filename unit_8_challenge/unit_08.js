@@ -6,11 +6,12 @@
 let out_t1 = '';
 function t1() {
     let i = 0;
-    while (i < 50) {
+    while (i <= 100) {
+        if (i == 100) { out_t1 += `${i}&nbsp;` }
+        else { out_t1 += i + ' ' }
         i++;
-        out_t1 += i + ' ';
     }
-    document.querySelector('.out-1').textContent = out_t1;
+    document.querySelector('.out-1').innerHTML = out_t1;
 }
 
 document.querySelector('.b-1').onclick = t1;
@@ -22,10 +23,12 @@ document.querySelector('.b-1').onclick = t1;
 
 let out_t2 = '';
 function t2() {
-    let i = 0;
-    while (i < 122) {
-        i = i + 2;
-        out_t2 += i + ' ';
+    let i_p2_1 = +document.querySelector('.i-p2_1').value;
+    let i_p2_2 = +document.querySelector('.i-p2_2').value;
+
+    while (i_p2_1 <= i_p2_2) {
+        out_t2 += i_p2_1 + ' ';
+        i_p2_1++;
     }
     document.querySelector('.out-2').textContent = out_t2;
 }
@@ -40,10 +43,21 @@ document.querySelector('.b-2').onclick = t2;
 
 out_t3 = '';
 function t3() {
-    let k = 26;
-    while (k > 7) {
-        k--;
-        out_t3 += k + ' ';
+    let i_p3_1 = +document.querySelector('.i-p3_1').value;
+    let i_p3_2 = +document.querySelector('.i-p3_2').value;
+
+    if (i_p3_1 < i_p3_2) {
+        while (i_p3_1 <= i_p3_2) {
+
+            out_t3 += i_p3_1 + ' ';
+            i_p3_1++;
+        }
+    } else {
+        while (i_p3_2 <= i_p3_1) {
+
+            out_t3 += i_p3_2 + ' ';
+            i_p3_2++;
+        }
     }
     document.querySelector('.out-3').textContent = out_t3;
 }
@@ -57,10 +71,22 @@ document.querySelector('.b-3').onclick = t3;
 
 out_t4 = '';
 function t4() {
-    let i = 77;
-    while (i >= 35) {
-        out_t4 += i + '_';
-        i = i - 3;
+    let i_p4_1 = +document.querySelector('.i-p4_1').value;
+    let i_p4_2 = +document.querySelector('.i-p4_2').value;
+    let i_p4_3 = +document.querySelector('.i-p4_3').value;
+
+    if (i_p4_1 < i_p4_2) {
+        while (i_p4_1 <= i_p4_2) {
+
+            out_t4 += i_p4_1 + ' ';
+            i_p4_1 = i_p4_1 + i_p4_3;
+        }
+    } else {
+        while (i_p4_2 <= i_p4_1) {
+
+            out_t4 += i_p4_2 + ' ';
+            i_p4_2 = i_p4_2 + i_p4_3;
+        }
     }
     document.querySelector('.out-4').textContent = out_t4;
 }
