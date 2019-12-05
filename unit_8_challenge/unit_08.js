@@ -141,21 +141,17 @@ document.querySelector('.b-7').onclick = t7;
 
 
 //  Task 8
-// Есть input i-81 и i-82 куда пользователь может ввести числа больше нуля (проверок не делаем, принимаем как факт).
-// Считаем, что второе число всегда больше первого.
-// По нажатию кнопки b-8  должна запускаться функция f8, которая выводит в out-8 числа от первого введенного до второго включительно, с шагом 1.
-// Разделитель пробел. Если пользователь ввел 4 и 8  и нажал кнопку, мы получим:
-//     4 5 6 7 8
-// Задача решается с помощью цикла  while.
 
 out_t8 = '';
 function t8() {
-    let i_81 = document.querySelector('.i-81').value;
-    let i_82 = document.querySelector('.i-82').value;
+    let start = 333;
+    let and = 1000000;
+    let day = 1;
 
-    while (i_81 <= i_82) {
-        out_t8 += i_81 + ' ';
-        i_81++;
+    while (start <= and) {
+        start = start + 333;
+        day++;
+        out_t8 = day;
     }
     document.querySelector('.out-8').textContent = out_t8;
 }
@@ -164,29 +160,27 @@ document.querySelector('.b-8').onclick = t8;
 
 
 //  Task 9
-// Есть input i-91 и i-92 куда пользователь может ввести числа.
-// По нажатию кнопки b-9 должна запускаться функция f9, которая выводит в out-9 числа от меньшего введенного до большего включительно, с шагом 1.
-// Разделитель пробел. Если пользователь ввел 4 и 8  и нажал кнопку, мы получим:
-//     4 5 6 7 8
-// если ввел 8 и 6, то получим
-// 6 7 8
-// Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл  while.
 
 out_t9 = '';
 function t9() {
-    let i_91 = document.querySelector('.i-91').value;
-    let i_92 = document.querySelector('.i-92').value;
+    let i_p9_1 = +document.querySelector('.i-p9_1').value;
+    let i_p9_2 = +document.querySelector('.i-p9_2').value;
 
-    if (i_91 < i_92) {
-        while (i_91 <= i_92) {
-            out_t9 += i_91 + ' ';
-            i_91++;
-        }
-    } else {
-        while (i_92 <= i_91) {
-            out_t9 += i_92 + ' ';
-            i_92++;
-        }
+    switch (true) {
+        // case i_p9_1 % 2 == 0 || i_p9_2 % 2 == 0: out_t9 += 0; continue;
+        case (i_p9_1 < i_p9_2):
+            while (i_p9_1 <= i_p9_2) {
+                if (i_p9_1 % 2 == 0) { out_t9 += 0 + ' '; }
+                else { out_t9 += i_p9_1 + ' '; }
+                i_p9_1++;
+            }; break;
+        case (i_p9_2 < i_p9_1):
+            while (i_p9_2 <= i_p9_1) {
+                if (i_p9_2 % 2 == 0) { out_t9 += 0 + ' '; }
+                else { out_t9 += i_p9_2 + ' '; }
+                i_p9_2++;
+            }
+
     }
     document.querySelector('.out-9').textContent = out_t9;
 }
@@ -195,17 +189,22 @@ document.querySelector('.b-9').onclick = t9;
 
 
 //  Task 10
-// Кнопка b-10 запускает функцию t10. Функция должна выводить в out-10 четные годы от 1950 до 2000 включительно.
-// Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
 
 out_t10 = '';
 function t10() {
-    let i = 1950;
-    while (i <= 2000) {
-        out_t10 += i + ' ';
-        i = i + 2;
+    let i = 1;
+    while (i < 7) {
+        let k = 0;
+        while (k < 6) {
+            k++;
+            if (k < 5) { out_t10 += '&nbsp;'; }
+            else if (k >= 5 && i % 2 != 0) out_t10 += '*';
+            else if (i % 2 == 0 && k >= 5) { out_t10 += '*'; break }
+        }
+        out_t10 += '<br>';
+        i++;
     }
-    document.querySelector('.out-10').textContent = out_t10;
+    document.querySelector('.out-10').innerHTML = out_t10;
 }
 
 document.querySelector('.b-10').onclick = t10;
