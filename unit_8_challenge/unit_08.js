@@ -180,7 +180,6 @@ function t9() {
                 else { out_t9 += i_p9_2 + ' '; }
                 i_p9_2++;
             }
-
     }
     document.querySelector('.out-9').textContent = out_t9;
 }
@@ -210,21 +209,14 @@ function t10() {
 document.querySelector('.b-10').onclick = t10;
 
 //  Task 11
-// Кнопка b-11 запускает функцию t11.  Функция должна:
-//     получить все div.div-11
-// перебрать их с помощью цикла  while. Обращение к div выглядит так elem[i]
-// вывести в out-11 содержимое каждого блока. Разделитель - пробел.
-//     В результате должно получиться так:
-//     one 3 4 two
-
 
 out_t11 = '';
 function t11() {
-    let div_11 = document.querySelectorAll('.div-11');
-
-    let i = 0;
-    while (i < div_11.length) {
-        out_t11 += div_11[i].textContent + ' ';
+    let i = 1;
+    let k = 10
+    while (i <= 10) {
+        out_t11 += `${k} ${i} `;
+        k--;
         i++;
     }
     document.querySelector('.out-11').textContent = out_t11;
@@ -233,56 +225,52 @@ function t11() {
 document.querySelector('.b-11').onclick = t11;
 
 //  Task 12
-// Кнопка b-12 запускает функцию t12.  Функция должна:
-//     получить все div.div-12
-// перебрать их с помощью цикла  while. Обращение к div выглядит так elem[i]
-// применить к каждому elem[i].style.background = ‘orange’
 
+out_t12 = '';
 function t12() {
-    let div_12 = document.querySelectorAll('.div-12');
-    let i = 0;
-    while (i < div_12.length) {
-        div_12[i].style.background = 'orange';
-        i++;
+    let a = 0;
+    do {
+        out_t12 = 'do while work';
+    } while (a < 0);
+
+    let b = 0;
+    while (b < 0) {
+        out_t12 = 'while work';
     }
+    document.querySelector('.out-12').textContent = out_t12;
 }
 document.querySelector('.b-12').onclick = t12;
 
 //  Task 13
-// Кнопка b-13 запускает функцию t13.  Функция должна:
-//     получить все input.i-13
-// перебрать их с помощью цикла  while. Обращение к элементу выглядит так elem[i]
-// применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
+out_t13 = '';
 function t13() {
-    let i_13 = document.querySelectorAll('.i-13');
 
-    let i = 0;
-    while (i < i_13.length) {
-        i_13[i].value = i + 1;
-        i++;
-    }
+    let i = 100;
+    do {
+        out_t13 += i + ' ';
+        i--;
+    } while (i >= 0);
+    document.querySelector('.out-13').textContent = out_t13;
 }
 
 document.querySelector('.b-13').onclick = t13;
 
 //  Task 14
-// Кнопка b-14 запускает функцию t14  Функция должна:
-//     получить все input.i-14
-// перебрать их с помощью цикла  while. Обращение к элементу выглядит так elem[i]
-// вывести в out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
 
-
+out_t14 = '';
 function t14() {
-    let i_14 = document.querySelectorAll('.i-14');
+    let st = 5;
+    let en = 132;
+    let day = 1;
+    let percent = 30;
 
-    let i = 0;
-    while (i < i_14.length) {
-        switch (true) {
-            case i_14[i].checked: document.querySelector('.out-14').textContent = i_14[i].value; break;
-        }
-        i++;
-    }
+    do {
+        st = (st / 100 * percent) + st;
+        day++;
+        out_t14 = day;
+    } while (st <= en);
+    document.querySelector('.out-14').textContent = out_t14;
 }
 
 document.querySelector('.b-14').onclick = t14;
