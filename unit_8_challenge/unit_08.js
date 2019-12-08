@@ -259,11 +259,11 @@ document.querySelector('.b-13').onclick = t13;
 //  Task 14
 
 out_t14 = '';
-function t14() {
+function t14(percent) {
     let st = 5;
     let en = 132;
     let day = 1;
-    let percent = 30;
+    // let percent = 30;
 
     do {
         st = (st / 100 * percent) + st;
@@ -273,25 +273,29 @@ function t14() {
     document.querySelector('.out-14').textContent = out_t14;
 }
 
-document.querySelector('.b-14').onclick = t14;
+document.querySelector('.b-14').onclick = () => {
+    t14(30);
+}
+
 
 //  Task 15
-// Кнопка b-15 запускает функцию t15  Функция должна выводить следующую последовательность в out-15:
-// 10 0 9 1 8 2 7 3 6 4 5 5 4 6 3 7 2 8 1 9 0 10
-// Для вывода использовать цикл  while. Разделитель пробел.
 
 let out_t15 = '';
 
-function t15() {
-    let i = 0;
-    let k = 10;
+function t15(per) {
+    let st = 1.1;
+    let en = 568;
+    let day = 1;
 
-    while (i <= 10) {
-        out_t15 += `${k} ${i} `;
-        i++;
-        k--;
-    }
+    do {
+        st = st + per;
+        day++;
+        out_t15 = day;
+    } while (st <= en);
+
     document.querySelector('.out-15').textContent = out_t15;
 }
 
-document.querySelector('.b-15').onclick = t15;
+document.querySelector('.b-15').onclick = () => {
+    t15(0.3);
+}
