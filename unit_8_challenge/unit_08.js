@@ -299,3 +299,21 @@ function t15(per) {
 document.querySelector('.b-15').onclick = () => {
     t15(0.3);
 }
+
+//  Task 16
+
+function t16() {
+    let pt16 = document.querySelectorAll('.task-16');
+
+    let i = 0;
+    do {
+        pt16[i].innerHTML = i + 1;
+        i++;
+    } while (i < pt16.length);
+}
+
+document.querySelector('.b-16').onclick = () => {
+    t16();
+}
+
+
