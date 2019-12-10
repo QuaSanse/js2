@@ -302,9 +302,9 @@ document.querySelector('.b-15').onclick = () => {
 
 //  Task 16
 
-function t16() {
-    let pt16 = document.querySelectorAll('.task-16');
+let pt16 = document.querySelectorAll('.task-16');
 
+function t16() {
     let i = 0;
     do {
         pt16[i].innerHTML = i + 1;
@@ -316,4 +316,21 @@ document.querySelector('.b-16').onclick = () => {
     t16();
 }
 
+//  Task 17
 
+let pt17 = document.querySelectorAll('.task-17');
+
+function t17() {
+    let i = 0;
+    let k = 3;
+    do {
+        pt17[i].innerHTML = k;
+        i++;
+        k--;
+    } while (i < pt17.length);
+
+}
+
+document.querySelector('.b-17').onclick = () => {
+    t17();
+}
