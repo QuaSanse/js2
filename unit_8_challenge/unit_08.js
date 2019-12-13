@@ -334,3 +334,53 @@ function t17() {
 document.querySelector('.b-17').onclick = () => {
     t17();
 }
+
+//  Task 18
+
+out_t18 = '';
+function t18() {
+    let i = 1;
+    do {
+        if (i % 2 != 0) {
+            out_t18 += i;
+        } else { out_t18 += '*' }
+        i++;
+    } while (i < 20);
+    document.querySelector('.out-18').textContent = out_t18;
+}
+
+document.querySelector('.b-18').onclick = () => {
+    t18();
+}
+
+//  Task 18
+
+out_t19 = '';
+function t19() {
+    let i = 0;
+    let k = 0;
+    do {
+        do {
+            if (i == 5 && k == 0) { out_t19 += '1 ' }
+            if (i == 6 && k == 1) { out_t19 += '1 ' }
+            if (i == 7 && k == 2) { out_t19 += '1 ' }
+            if (i == 8 && k == 3) { out_t19 += '1 ' }
+            if (i < 5) { out_t19 += '&nbsp;' }
+            if (
+                (i > 5 && i != 5 && k == 0) ||
+                (i >= 5 && i != 6 && k == 1) ||
+                (i >= 5 && i != 7 && k == 2) ||
+                (i >= 5 && i != 8 && k == 3)
+            ) { out_t19 += '* ' }
+            i++;
+        } while (i <= 8);
+        out_t19 += '<br>';
+        k++;
+        i = 0;
+    } while (k < 4);
+    document.querySelector('.out-19').innerHTML = out_t19;
+}
+
+document.querySelector('.b-19').onclick = () => {
+    t19();
+}
