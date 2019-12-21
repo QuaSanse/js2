@@ -29,32 +29,76 @@ for (let i = 0; i < u3.length; i++) {
 }
 
 // TASK 4. Используя цикл, добавьте на все блоки p.u - 4 событие onclick.По клику запускайте функцию func_4, которая присваивает элементу, на котором произошло событие, класс css - 2. Для обращения внутри функции к такому элементу используйте this.
+let u4 = document.querySelectorAll('.u-4');
 
-function func_4() { }
+for (let i = 0; i < u4.length; i++) {
+    u4[i].onclick = function func_4() {
+        this.classList.add('css-2');
+    }
+}
+
+
 
 // TASK 5. C помощью цикла, повесьте на блоки p.u - 5 функцию func_5, которая при клике будет удалять класс css - 3 с элемента, на котором произошло событие.
+let u5 = document.querySelectorAll('.u-5');
 
-function func_5() { }
+for (let i = 0; i < u5.length; i++) {
+    u5[i].onclick = function func_5() {
+        this.classList.remove('css-3');
+    }
+}
 
 // TASK 6. Есть кнопка.u - 6. Напишите функцию, которая при клике делает toggle классу.active для данной кнопки.
+let u6 = document.querySelector('.u-6');
 
-function func_6() { }
+u6.onclick = function func_6() {
+    this.classList.toggle('active');
+}
 
 // TASK 7. Напишите функцию func - 7, которая будучи запущенной возвращает количество элементов с классом css-3.
 
-function func_7() { }
+function func_7() {
+    console.log(document.querySelectorAll('.css-3').length);
+}
+
+func_7();
 
 // TASK 8. Напишите функцию func - 8, которая будучи запущенной, присваивает всем элементам p.u - 1 атрибут title со значением test - data.
 
-function func_8() { }
+function func_8() {
+    let pu1 = document.querySelectorAll('.u-1');
+    for (let i = 0; i < pu1.length; i++) {
+        pu1[i].setAttribute('data-title', 'test-data');
+    }
+}
+
+func_8();
 
 // TASK 9. С помощью цикла получите кнопки.u - 9. Добавьте на них событие onclick которое запускает функцию func - 9. Функция возращает data атрибут элемента, по которому кликнули.
+let u9 = document.querySelectorAll('.u-9');
 
-function func_9() { }
+for (let i = 0; i < u9.length; i++) {
+    u9[i].onclick = function func_9() {
+        console.log(this.getAttribute('data'));
+    }
+}
 
 // TASK 10. Напишите функцию func - 10, которая при клике на кнопке.u -10__button читает атрибут валюты data - currency и на основании этого выводит в p.u -10__out коэффициент данной валюты по отношению к доллару.Коэффициент возьмите приблизительно из интернета.Считается, что пользователь всегда вводит валюту в долларах.
+let u10 = document.querySelectorAll('.u-10__button');
+let u10_out = document.querySelector('.u-10__out');
 
-function func_10() { }
+for (let i = 0; i < u10.length; i++) {
+    u10[i].onclick = function func_10() {
+        if (this.getAttribute('data-currency') == 'euro') {
+            u10_out.innerHTML = '1.11 USD';
+        } else if (this.getAttribute('data-currency') == 'usd') {
+            u10_out.innerHTML = '1 USD';
+        }
+        else if (this.getAttribute('data-currency') == 'rub') {
+            u10_out.innerHTML = '0.016091 USD';
+        }
+    }
+}
 
 // TASK 11.Напишите функцию func - 11, которая при клике на кнопке.u -11__button читает атрибут валюты data - currency и на основании этого выводит в p.u -11__out перевод валюты введенной пользователем в input.u -11__input в указанную валюту.Считается, что пользователь всегда вводит валюту в долларах. 
 
