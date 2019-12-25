@@ -102,7 +102,17 @@ for (let i = 0; i < u10.length; i++) {
 
 // TASK 11.Напишите функцию func - 11, которая при клике на кнопке.u -11__button читает атрибут валюты data - currency и на основании этого выводит в p.u -11__out перевод валюты введенной пользователем в input.u -11__input в указанную валюту.Считается, что пользователь всегда вводит валюту в долларах. 
 
-function func_11() { }
+let u11_btn = document.querySelectorAll('.u-11__button');
+
+for (let i = 0; i < u11_btn.length; i++) {
+    u11_btn[i].onclick = function func_11() {
+        let u11_inp = document.querySelector('.u-11__input').value;
+        let u11_out = document.querySelector('.u-11_out');
+        let sum = this.getAttribute('data-currency');
+        u11_out.value = u11_inp * sum;
+    }
+}
+
 
 // TASK  12. Создайте функцию func - 12, которая создает через createElement элемент div, присваивает ему класс css - 4 и возвращает данный элемент
 
