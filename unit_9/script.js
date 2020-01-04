@@ -116,27 +116,68 @@ for (let i = 0; i < u11_btn.length; i++) {
 
 // TASK  12. Создайте функцию func - 12, которая создает через createElement элемент div, присваивает ему класс css - 4 и возвращает данный элемент
 
-function func_12() { }
+function func_12() {
+    let div_12 = document.createElement('div');
+    div_12.classList.add('css-4');
+    return div_12;
+}
+console.log(func_12());
 
 // TASK  13.Создайте функцию func - 13, которая создает элемент span.span - 13 с текстом 13 через createElement и вставляет его в p.u - 13(append).
 
-function func_13() { }
+function func_13() {
+    let span_13 = document.createElement('span');
+    span_13.classList.add('span-13')
+    span_13.innerHTML = ' 13';
+    document.querySelector('.u-13').appendChild(span_13);
+}
+func_13();
 
 // TASK  14. Создайте функцию func - 14, которая создает элемент span.span - 14 с текстом 14 через createElement и вставляет его в p.u - 14(prepend).
 
-function func_14() { }
+function func_14() {
+    let span_14 = document.createElement('span');
+    span_14.classList.add('span-14');
+    span_14.innerHTML = '14 ';
+    document.querySelector('.u-14').prepend(span_14);
+}
+func_14();
 
 // TASK 15. Создайте функцию func - 15, которая создает элемент span.span - 15 с текстом 15 через createElement и вставляет его в p.u - 15(before)
 
-function func_15() { }
+function func_15() {
+    let span_15 = document.createElement('span');
+    span_15.classList.add('span-15');
+    span_15.innerHTML = '15';
+    document.querySelector('.u-15').before(span_15);
+}
+func_15();
 
 // TASK    16. Создайте функцию funct - 16, которая создает элемент button.u - 16 c текстом Push.Повесьте на данный элемент событие onclick со стрелочной функцией, которая в консоль выводит текст u - 16. И после добавления события добавьте данный элемент на страницу в div.u -16__out.Проверьте работоспособность события.
 
-function func_16() { }
+function func_16() {
+    let btn_16 = document.createElement('button');
+    btn_16.classList.add('u-16');
+    btn_16.innerHTML = 'Push';
+    document.querySelector('.u-16__out').before(btn_16);
+
+    btn_16.onclick = () => {
+        console.log(btn_16.innerHTML);
+        document.querySelector('.u-16__out').innerHTML = btn_16.innerHTML;
+    }
+}
+func_16();
 
 // TASK 17. Создайте функцию, funct - 17, которая при запуске создаст элемент p c текстом 17 и заменит этим элементом div.u - 17
 
-function func_17() { }
+function func_17() {
+    let p_17 = document.createElement('p');
+    p_17.classList.add('p-17');
+    p_17.innerHTML = '17';
+
+    document.querySelector('.u-17').replaceWith(p_17);
+}
+func_17();
 
 // TASK 19. C помощью цикла повесьте на div.out - 18 функцию func - 18. Данная функция дожна удалять элемент, на котором произошел клик из DOM.Функция должна возвращать удаленный элемент
 
