@@ -179,16 +179,74 @@ function func_17() {
 }
 func_17();
 
-// TASK 19. C помощью цикла повесьте на div.out - 18 функцию func - 18. Данная функция дожна удалять элемент, на котором произошел клик из DOM.Функция должна возвращать удаленный элемент
+// TASK 18. C помощью цикла повесьте на div.out - 18 функцию func - 18. Данная функция дожна удалять элемент, на котором произошел клик из DOM.Функция должна возвращать удаленный элемент
 
-function func_18() { }
+let out_18 = document.querySelectorAll('.out-18');
+
+for (let i = 0; i < out_18.length; i++) {
+    out_18[i].onclick = function func_18() {
+        this.remove(out_18[i]);
+    }
+}
+
 // TASK   19. Создайте функцию func - 19, которая принимает параметр текст.Создает элемент li, вставляет в него указанный текст, и добавляет на страницу в ul.u - 19 в конец списка.
 
-function func_19() { }
+function func_19(a) {
+    let li_19 = document.createElement('li');
+    li_19.classList.add('li-19');
+    li_19.textContent = a;
+
+    document.querySelector('.u-19').append(li_19);
+}
+
+func_19('Second');
+
 // TASK 20. Доработайте предыдущее задание.Допишите функцию func - 20 которая может принимать текст от пользователя и вставлять в список ul.u - 20. Также добавьте checkbox - важное, при этом созданный li получает класс.css - 5.
 
-function func_20() { }
 
+let u_20 = document.querySelector('.u-20');
+
+// input
+let inp_20 = document.createElement('input');
+inp_20.classList.add('inp-20');
+inp_20.setAttribute('type', 'text')
+inp_20.setAttribute('placeholder', 'Задача');
+u_20.before(inp_20);
+
+// checkbox
+let ch_20 = document.createElement('input');
+ch_20.setAttribute('type', 'checkbox');
+ch_20.setAttribute('id', 'ch-20');
+ch_20.classList.add('ch-20');
+ch_20.style.marginLeft = '10px';
+inp_20.after(ch_20);
+
+// label for checkbox
+let lab_20 = document.createElement('label');
+lab_20.setAttribute('for', 'ch-20');
+lab_20.innerHTML = 'Важное';
+ch_20.after(lab_20);
+
+// button
+let btn_20 = document.createElement('button');
+btn_20.classList.add('btn-20');
+btn_20.textContent = 'Добавить задачу';
+btn_20.style.marginLeft = '10px';
+lab_20.after(btn_20);
+
+btn_20.onclick = function func_20() {
+    vl_20 = inp_20.value;
+
+    let li_20 = document.createElement('li');
+    if (ch_20.checked) {
+        li_20.classList.add('css-5');
+    }
+    li_20.textContent = vl_20;
+    u_20.appendChild(li_20);
+
+    // clear
+    inp_20.value = '';
+}
 
 
 
