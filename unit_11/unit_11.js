@@ -113,12 +113,9 @@ function f8() {
     emptyArr[0] = inValue;
 
     for (let i = 0; i < d8.length; i++) {
-        emptyArr[emptyArr.length] = d8[i];
+        emptyArr[i + 1] = d8[i];
     }
-    // emptyArr[emptyArr.length] = d8;
-    // console.log(emptyArr);
-    d8 = [emptyArr];
-    console.log(d8);
+    d8 = emptyArr;
     showArr('.out-8', d8);
 }
 
@@ -133,7 +130,10 @@ document.querySelector('.b-8').onclick = f8;
 let d9 = [100, 200, 300, 400, 700, 121];
 
 function f9() {
-
+    for (let i = 0; i < d9.length; i++) {
+        d9[i] = d9[i + 1];
+    }
+    d9.length = d9.length - 1;
     showArr('.out-9', d9);
 }
 
@@ -148,7 +148,9 @@ document.querySelector('.b-9').onclick = f9;
 let d10 = [3, 14, 15, 92, 6];
 
 function f10() {
-
+    let entrepot = d10[0];
+    d10[0] = d10[d10.length - 1];
+    d10[d10.length - 1] = entrepot;
     showArr('.out-10', d10);
 }
 
@@ -164,7 +166,8 @@ document.querySelector('.b-10').onclick = f10;
 let d11 = [2, 3, 4, 5, 6, 7];
 
 function f11() {
-
+    let inValue = +document.querySelector('.i-11').value;
+    document.querySelector('.out-11').innerHTML = d11.indexOf(inValue);;
 }
 
 document.querySelector('.b-11').onclick = f11;
