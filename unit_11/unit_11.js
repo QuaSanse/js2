@@ -148,9 +148,7 @@ document.querySelector('.b-9').onclick = f9;
 let d10 = [3, 14, 15, 92, 6];
 
 function f10() {
-    let entrepot = d10[0];
-    d10[0] = d10[d10.length - 1];
-    d10[d10.length - 1] = entrepot;
+    d10.reverse();
     showArr('.out-10', d10);
 }
 
@@ -182,7 +180,17 @@ document.querySelector('.b-11').onclick = f11;
 let d12 = [6, 62, 60, 70, 1, 5];
 
 function f12() {
-
+    let inValue = +document.querySelector('.i-12').value;
+    let out = document.querySelector('.out-12');
+    for (let i = 0; i < d12.length; i++) {
+        if (d12[i] === inValue) {
+            out.innerHTML = i;
+            break;
+        }
+        else {
+            out.innerHTML = '-1';
+        }
+    }
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -197,7 +205,15 @@ document.querySelector('.b-12').onclick = f12;
 let d13 = [6, 0, 22, 1, 4, 76];
 
 function f13() {
+    let entrepot = [];
+    let a = d13.length - 1;
 
+    for (let i = 0; i < d13.length; i++) {
+        entrepot[i] = d13[a];
+        a--;
+    }
+
+    d13 = entrepot;
     showArr('.out-13', d13);
 }
 
@@ -213,7 +229,12 @@ document.querySelector('.b-13').onclick = f13;
 let d14 = [];
 
 function f14() {
+    let inValue = +document.querySelector('.i-14').value;
+    d14.length = inValue;
 
+    for (let i = 0; i < d14.length; i++) {
+        d14[i] = 1;
+    }
     showArr('.out-14', d14);
 }
 
