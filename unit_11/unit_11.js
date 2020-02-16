@@ -249,8 +249,21 @@ document.querySelector('.b-14').onclick = f14;
 let d15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
+    let inValue = +document.querySelector('.i-15').value;
+    let out = '';
 
+    for (let i = 0; i < d15.length; i++) {
+        if (out == true) break;
 
+        switch (d15[i] === inValue) {
+            case true: out = true; break;
+            default: out = false;
+        }
+    }
+
+    if (out == false) {
+        d15.push(inValue);
+    }
     showArr('.out-15', d15);
 }
 
@@ -267,7 +280,7 @@ let d161 = [5, 6, 7, 8, 9];
 let d162 = [23, 24, 56, 87];
 
 function f16() {
-
+    d16 = d161.concat(d162);
     showArr('.out-16', d16);
 }
 
