@@ -183,6 +183,12 @@ let a11 = [
 
 function f11() {
     let out = '';
+    for (let i = 0; i < a11.length; i++) {
+        for (let k = a11[i].length - 1; k >= 0; k--) {
+            out += a11[i][k] + ' ';
+        }
+    }
+    document.querySelector('.out-11').innerHTML = out;
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -201,6 +207,15 @@ function f12() {
         [0, 1, 0, 1, 0, 1, 0, 1],
         [1, 0, 1, 0, 1, 0, 1, 0],
     ];
+
+    let out = '';
+
+    for (let i = 0; i < a12.length; i++) {
+        for (let k = 0; k < a12[i].length; k++) {
+            if (a12[i][k] > 0) out += a12[i][k] + ' ';
+        }
+    }
+    document.querySelector('.out-12').innerHTML = out;
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -211,7 +226,24 @@ document.querySelector('.b-12').onclick = f12;
 let a13 = [];
 
 function f13() {
+    let a = 0;
+    let b = 1;
 
+    for (let i = 0; i < 8; i++) {
+        let temp = [];
+
+        for (let k = 0; k < 8; k++) {
+            temp.push(a);
+
+            if (a == 0) a = 1;
+            else a = 0;
+
+        }
+        a13.push(temp);
+        if (a == 0) a = 1;
+        else a = 0;
+    }
+    console.log(a13);
 }
 
 document.querySelector('.b-13').onclick = f13;
