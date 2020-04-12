@@ -211,7 +211,7 @@ document.querySelector('.b-10').onclick = () => {
         "d": 54,
         "m": 22,
     }
-    document.querySelector('.out-10').innerHTML = f10(a10, 54);
+    document.querySelector('.out-10').innerHTML = f10(a10, 22);
 };
 
 
@@ -227,6 +227,12 @@ let a11 = {
 };
 
 function f11() {
+    let i11 = document.querySelector('.i-11').value;
+
+    for (let key in a11) {
+        if (i11 == key) delete a11[key];
+    }
+    f5(a11, '.out-11');
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -243,7 +249,12 @@ let a12 = {
 };
 
 function f12() {
+    let i11 = document.querySelector('.i-12').value;
 
+    for (let key in a12) {
+        if (i11 == a12[key]) delete a12[key];
+    }
+    f5(a12, '.out-12');
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -259,7 +270,12 @@ let a13 = {
 };
 
 function f13() {
+    let sum = 0;
 
+    for (let key in a13) {
+        if (isFinite(a13[key]) == true) sum = sum + a13[key];
+    }
+    document.querySelector('.out-13').innerHTML = sum;
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -276,7 +292,12 @@ let a14 = {
 };
 
 function f14() {
+    let out = '';
+    for (let key in a14) {
+        out += a14[key][0] + ' ';
+    }
 
+    document.querySelector('.out-14').innerHTML = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -294,7 +315,14 @@ let a15 = {
 };
 
 function f15() {
+    let out = '';
 
+    for (let key in a15) {
+        for (let i = 0; i < a15[key].length; i++) {
+            out += a15[key][i] + ' ';
+        }
+    }
+    document.querySelector('.out-15').innerHTML = out;
 }
 
 document.querySelector('.b-15').onclick = f15;
@@ -318,7 +346,12 @@ let a16 = {
 }
 
 function f16() {
+    let out = '';
 
+    for (let key in a16) {
+        out += a16[key].name + ' ';
+    }
+    document.querySelector('.out-16').innerHTML = out;
 }
 
 document.querySelector('.b-16').onclick = f16;
@@ -343,7 +376,14 @@ let a17 = {
 }
 
 function f17() {
+    let out = '';
 
+    for (let key in a17) {
+        if (a17[key].age > 30) {
+            out += a17[key].name + ' ';
+        }
+    }
+    document.querySelector('.out-17').innerHTML = out;
 }
 
 document.querySelector('.b-17').onclick = f17;
