@@ -8,11 +8,12 @@ function f1() {
         "two": 16,
         "five": 20
     };
-    document.querySelector('.out-1').innerHTML = a1.two;
-    //return ...
+    return a1.two;
 }
 
-document.querySelector('.b-1').onclick = f1;
+document.querySelector('.b-1').onclick = () => {
+    document.querySelector('.out-1').innerHTML = f1();
+}
 
 
 // Task 2
@@ -273,7 +274,7 @@ function f13() {
     let sum = 0;
 
     for (let key in a13) {
-        if (isFinite(a13[key]) == true) sum = sum + a13[key];
+        if (typeof (a13[key]) == 'number') sum = sum + a13[key];
     }
     document.querySelector('.out-13').innerHTML = sum;
 }
