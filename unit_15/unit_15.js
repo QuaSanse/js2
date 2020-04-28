@@ -63,7 +63,7 @@ document.querySelector('.b-4').onclick = f4;
 let s5 = new Set(['a', 'b', 'c', 'z', 'a2', 'b2', 'c2', 'z2']);
 
 function f5() {
-
+    document.querySelector('.out-5').innerHTML = s5.size;
 }
 
 document.querySelector('.b-5').onclick = f5;
@@ -74,7 +74,8 @@ document.querySelector('.b-5').onclick = f5;
 let a6 = [1, 2, 3, 4, 5, 3, 4, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56];
 
 function f6() {
-
+    let s6 = new Set(a6);
+    document.querySelector('.out-6').innerHTML = s6.size;
 }
 
 document.querySelector('.b-6').onclick = f6;
@@ -83,7 +84,13 @@ document.querySelector('.b-6').onclick = f6;
 // Добавьте input .i-7. При нажатии b-7 выполняете функцию f7. Функция должна получать из i-7 значение пароля и проверять, чтобы пользователь в строке пароля использовал не повторяющиеся символы. Если символы уникальны, а длина пароля больше ( строго) 6 то выводите в out-7 число 1. Если есть повторяющиеся символы, или длина меньше или равна 6 - то выводите 0. Для проверки уникальности символов используйте Set.
 
 function f7() {
+    let out = document.querySelector('.out-7');
+    let inVal = document.querySelector('.i-7').value;
+    let myArray = Array.from(inVal);
+    let s7 = new Set(myArray);
 
+    if (s7.size > 6) out.textContent = '1';
+    else out.textContent = '0';
 }
 
 document.querySelector('.b-7').onclick = f7;
@@ -92,9 +99,18 @@ document.querySelector('.b-7').onclick = f7;
 // При нажатии b-8 выполняете функцию f8. Функция должна создать массив res8 на основе набора, но добавить только те значения из s8, которых больше 5. Функция должна возвратить res8.
 
 let s8 = new Set([[1, 2, 3, 4, 5, 3, 4, 7, 9, 5, 7, 8, 9, 23, 45, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56]]);
+console.log(s8);
+
 
 function f8() {
+    let res8 = [];
 
+    for (let i of s8) {
+        for (let a = 0; a < i.length; a++) {
+            if (i[a] > 5) res8.push(i[a]);
+        }
+    }
+    return res8;
 }
 
 document.querySelector('.b-8').onclick = () => {
@@ -105,8 +121,16 @@ document.querySelector('.b-8').onclick = () => {
 //  При нажатии b-9 выполняете функцию f9. Функция должна принимать набор set в качестве параметра, преобразовывать его в массив и возвращать в виде строки. При преобразовании массива в строку между элементами должен быть пробел.
 
 function f9(our_set) {
+    let arr = [];
+    let out = '';
 
-    // return ///
+    for (let i of our_set) {
+        arr.push(i);
+    }
+    for (let i = 0; i < arr.length; i++) {
+        out += `${arr[i]} `;
+    }
+    return out;
 }
 
 document.querySelector('.b-9').onclick = () => {
@@ -118,7 +142,12 @@ document.querySelector('.b-9').onclick = () => {
 // При нажатии b-10 выполняете функцию f10. Функция должна принимать набор set в качестве параметра и выводить его в указанный элемент. Элемент указывается как второй параметр функции f10. Вывод значений - через пробел.
 
 function f10(out_set, elem) {
+    let out = '';
 
+    for (let i of out_set) {
+        out += `${i} `;
+    }
+    document.querySelector(elem).innerHTML = out;
 }
 
 document.querySelector('.b-10').onclick = () => {
