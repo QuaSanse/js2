@@ -162,6 +162,8 @@ document.querySelector('.b-10').onclick = () => {
 let a11 = [[1], [1]];
 
 function f11() {
+    let a = new Set(a11);
+    console.log(a);
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -172,7 +174,9 @@ document.querySelector('.b-11').onclick = f11;
 let str12 = 'The name conjures up visions of plum pudding and Christmas punch quaint coaching inns and cozy firesides but also of orphaned and starving children';
 
 function f12() {
-
+    let myArray = Array.from(str12);
+    let mySet = new Set(myArray);
+    return mySet;
 }
 
 document.querySelector('.b-12').onclick = () => {
@@ -184,10 +188,22 @@ document.querySelector('.b-12').onclick = () => {
 
 let str13 = 'The name conjures up visions of plum pudding and Christmas punch quaint coaching inns and cozy firesides but also of orphaned and starving children';
 
-
 function f13() {
+    let myArray = Array.from(str13);
+    let mySet = new Set(myArray);
+    let resArray = {};
+    let count = 0;
 
-    // return
+    for (let i of mySet) {
+        for (let k = 0; k < myArray.length; k++) {
+            if (i === myArray[k]) {
+                count++;
+                resArray[i] = count;
+            }
+        } count = 0;
+    }
+    console.log(mySet);
+    return resArray;
 }
 
 document.querySelector('.b-13').onclick = () => {
