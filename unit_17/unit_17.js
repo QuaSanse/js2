@@ -39,8 +39,8 @@ document.querySelector('.b-2').onclick = t2;
 function t3() {
     let a3 = [4, "3", 6, 7, "12", 34, "56", 78, 90, 11];
     a3.map(item => {
-        if (typeof item == 'string') {
-            a3_res.push(Number(item));
+        if (Number(item)) {
+            a3_res.push(item);
         }
     })
     document.querySelector('.out-3').innerHTML = a3_res;
