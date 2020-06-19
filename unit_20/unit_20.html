@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit 20</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Unit 20. События клавиатуры</h1>
+
+        <section>
+            <p><b>Task 1.</b></p>
+            <p>Дан input .i-1. Напишите функцию t1, которая выводит в .out-1 символ и возвращает его. Во всех
+                последующих задачах - работаем с латиницей и цифрами. </p>
+            <input type="text" class="i-1">
+            <div class="out-1">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 2.</b></p>
+            <p>Дан input .i-2. Напишите функцию t2, которая выводит в .out-2 код символа и возвращает его. </p>
+            <input type="text" class="i-2">
+            <div class="out-2">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 3.</b></p>
+            <p>Дан input .i-3. Напишите функцию t3, которая выводит на страницу true если введен символ и false если
+                цифра. Для определения - используйте код клавиши. </p>
+            <input type="text" class="i-3">
+            <div class="out-3">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 4.</b></p>
+            <p>Дан input .i-4. Напишите функцию t4, которая выводит в .out-4 только символы в нижнем регистре. Т.е.
+                ввели ab4Bci в out получаем ab4bci. </p>
+            <input type="text" class="i-4">
+            <div class="out-4">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 5.</b></p>
+            <p>Дан input .i-5. Напишите функцию t5, которая выводит в .out-5 все вводимые символы в верхнем регистре.
+                Т.е. пользователь ввел AbCd и функция выведет ABCD. </p>
+            <input type="text" class="i-5">
+            <div class="out-5">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 6.</b></p>
+            <p> Дан input .i-6. Напишите функцию t6, которая выводит в .i-6 только символы в нижнем регистре. </p>
+            <div>
+                <input type="text" class="i-6">
+
+                <div class="out-6">
+                </div>
+        </section>
+
+        <section>
+            <p><b>Task 7.</b></p>
+            <p>Дан input .i-7. Напишите функцию t7, которая выводит в .out-7 случаный символ из массива a7 при каждом
+                вводе символа.</p>
+            <div>
+
+                <input type="text" class="i-7">
+
+                <div class="out-7">
+                </div>
+        </section>
+
+        <section>
+            <p><b>Task 8.</b></p>
+            <p>Дан input .i-8. Напишите функцию t8, которая выводит в .out-8 вводимый в input текст, но заменяет i на 1,
+                o на 0, l на 7.</p>
+            <div>
+
+                <input type="text" class="i-8">
+                <div class="out-8">
+                </div>
+        </section>
+
+        <section>
+            <p><b>Task 9.</b></p>
+            <p>Дан input .i-9. Напишите функцию t8, выводит в .out-9 количество нажатых клавиш стрелка вниз.</p>
+            <div>
+
+                <input type="text" class="i-9">
+                <div class="out-9">
+                </div>
+        </section>
+
+        <section>
+            <p><b>Task 10.</b></p>
+            <p>Дан input .i-10 и изображение 1.png. Добавьте событие на input, при нажатии клавиш стрелка вправо и
+                стрелка влево увеличивать ширину изображения. Клавиши стрелка вверх и вниз - увеличивать высоту
+                изображения. Одно нажатие клавиши - 1px.</p>
+            <div>
+                <input type="text" class="i-10">
+                <div class="div-10 block">
+                    <img src="img/1.png" alt="">
+                </div>
+                <div class="out-10">
+                </div>
+        </section>
+
+
+        <section>
+            <p><b>Task 11.</b></p>
+            <p> Проект. Дан input .i-11. Используя знания html и css нарисуйте клавиатуру (можно схематически).
+                Изображение должно содержать числа, символьные клавиши, пробел, enter, caps lock, shift, tab, alt. При
+                вводе текста в input в момент нажатия клавиши - затемняйте ее, в момент отпускания - возвращайте к
+                первоначальному состоянию. Аналогично при нажатии enter, space, alt, shift, ctrl. Затемнение реализуйте
+                через добавление класса CSS. Для удобства рекомендую каждой клавише добавить атрибут data с символом.
+                Если нажата клавиша caps lock - то присвоить ей затемнение, которое работает до последующего отжатия
+                клавиши.</p>
+            <div>
+
+                <input type="text" class="i-11">
+                <div class="out-11">
+                    <p>
+                    <div class="keyboard">
+                        <div class="line">
+                            <div class="key" data-key="`">~</div>
+                            <div class="key" data-key="1">1</div>
+                            <div class="key" data-key="2">2</div>
+                            <div class="key" data-key="3">3</div>
+                            <div class="key" data-key="4">4</div>
+                            <div class="key" data-key="5">5</div>
+                            <div class="key" data-key="6">6</div>
+                            <div class="key" data-key="7">7</div>
+                            <div class="key" data-key="8">8</div>
+                            <div class="key" data-key="9">9</div>
+                            <div class="key" data-key="0">0</div>
+                            <div class="key" data-key="-">-</div>
+                            <div class="key" data-key="=">=</div>
+                            <div class="key Backspase" data-key="Backspace">Backspase</div>
+                        </div>
+
+                        <div class="line">
+                            <div class="key Tab" data-key="Tab">Tab</div>
+                            <div class="key" data-key="q">q</div>
+                            <div class="key" data-key="w">w</div>
+                            <div class="key" data-key="e">e</div>
+                            <div class="key" data-key="r">r</div>
+                            <div class="key" data-key="t">t</div>
+                            <div class="key" data-key="y">y</div>
+                            <div class="key" data-key="u">u</div>
+                            <div class="key" data-key="i">i</div>
+                            <div class="key" data-key="o">o</div>
+                            <div class="key" data-key="p">p</div>
+                            <div class="key" data-key="[">[</div>
+                            <div class="key" data-key="]">]</div>
+                            <div class="key key1" data-key="Backslash">| /</div>
+                        </div>
+
+                        <div class="line">
+                            <div class="key Caps" data-key="CapsLock">Caps</div>
+                            <div class="key" data-key="a">a</div>
+                            <div class="key" data-key="s">s</div>
+                            <div class="key" data-key="d">d</div>
+                            <div class="key" data-key="f">f</div>
+                            <div class="key" data-key="g">g</div>
+                            <div class="key" data-key="h">h</div>
+                            <div class="key" data-key="j">j</div>
+                            <div class="key" data-key="k">k</div>
+                            <div class="key" data-key="l">l</div>
+                            <div class="key" data-key=";">;</div>
+                            <div class="key" data-key="'">'</div>
+                            <div class="key Enter" data-key="Enter">Enter</div>
+                        </div>
+
+                        <div class="line">
+                            <div class="key lShift" data-key="ShiftLeft">Shift</div>
+                            <div class="key" data-key="z">z</div>
+                            <div class="key" data-key="x">x</div>
+                            <div class="key" data-key="c">c</div>
+                            <div class="key" data-key="v">v</div>
+                            <div class="key" data-key="b">b</div>
+                            <div class="key" data-key="n">n</div>
+                            <div class="key" data-key="m">m</div>
+                            <div class="key" data-key=",">,</div>
+                            <div class="key" data-key=".">.</div>
+                            <div class="key" data-key="/">/</div>
+                            <div class="key rShift" data-key="ShiftRight">Shift</div>
+                        </div>
+
+                        <div class="line">
+                            <div class="key lCtrl" data-key="ControlLeft">Ctrl</div>
+                            <div class="key" data-key="MetaLeft"><img
+                                    src="https://img.icons8.com/material/24/000000/windows-client--v1.png"
+                                    class="windows" /></div>
+                            <div class="key" data-key="fn">fn</div>
+                            <div class="key" data-key="AltLeft">Alt</div>
+                            <div class="key Spase" data-key="Space">Spase</div>
+                            <div class="key" data-key="AltRight">Alt</div>
+                            <div class="key" data-key="MetaRight"><img
+                                    src="https://img.icons8.com/material/24/000000/windows-client--v1.png"
+                                    class="windows" /></div>
+                            <div class="key" data-key="ContextMenu"><img
+                                    src="https://img.icons8.com/ios/50/000000/printer-error.png" class="windows" />
+                            </div>
+                            <div class="key rCtrl" data-key="ControlRight">Ctrl</div>
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+
+
+
+
+
+    </div>
+
+    <script src="unit_20.js"></script>
+</body>
+
+</html>

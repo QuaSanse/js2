@@ -1,0 +1,98 @@
+.container  {
+    width: 100%;
+}
+
+section {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #444;
+}
+
+.block {
+    width: 75px;
+    height: 75px;
+    margin: 25px;
+    border: 2px solid #333;
+}
+
+.active {
+    background: orange;
+}
+
+.hide {
+    display: none;
+}
+
+.keyboard {
+    border: 1px solid slategray;
+    border-radius: 4px;
+    padding: 5px;
+    position: relative;
+}
+
+.line::after {
+content: "";
+display: block;
+clear: both;
+}
+
+.key {
+    float: left;
+    height: 30px;
+    width: 30px;
+    border: 1px solid slategray;
+    border-radius: 4px;
+    margin: 3px;
+    text-align: center;
+    padding: 4px;
+    line-height: 22px;
+}
+
+.Backspase {
+    width: auto;
+}
+
+.Tab {
+    width: 45px;
+}
+
+.key1 {
+    width: 70px;
+}
+
+.Caps {
+    width: 55px;
+}
+
+.Enter {
+    width: 95px;
+}
+
+.lShift {
+    width: 75px;
+}
+
+.rShift {
+    width: 110px;
+}
+
+.lCtrl {
+    width: 40px;
+}
+
+.Spase {
+    width: 230px;
+}
+
+.rCtrl {
+    width: 55px;
+}
+
+.windows {
+    height: 18px;
+    width: 18px;
+}
+
+.highlight {
+    background-color: slategray;
+}
