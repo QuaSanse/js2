@@ -1,29 +1,28 @@
 /*
 *  class Valid2 наследуется от class Valid
-*
+*   добавлены свойства emaiError и passwordError
+*   добавлены условия для вывода ошибок
 */
 
 class Valid2 extends Valid {
-    constructor(email, password, isValid, emaiError, passwordError) {
-        super(email, password, isValid);
-        this.emaiError = emaiError;
-        this.passwordError = passwordError;
+    constructor(email, password) {
+        super(email, password);
+        this.emaiError = '';
+        this.passwordError = '';
     }
     validate() {
-        if (this.password.length >= 6) {
-            this.isValid = true;
-        }
-        if (this.password.length < 6) {
-            this.isValid = false;
-        }
-        if (this.email == '') {
+        super.validate();
+
+        if (this.email == '' || this.password.length < 6) {
             this.isValid = false;
         }
         if (this.email == '') {
             this.emaiError = 'email empty';
         }
-        if (this.password == '') {
+
+        if (this.password.length < 6) {
             this.passwordError = 'min length 6';
         }
+
     }
 }

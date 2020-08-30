@@ -10,8 +10,8 @@ class Goods {
         this.image = image;
         this.count = count;
     }
-    draw() {
-        document.querySelector('.out-4').innerHTML =
+    draw(domElem) {
+        document.querySelector(domElem).innerHTML =
             `
             <img src= img/${ this.image}> <br>
             Название товара: ${this.name}<br>
